@@ -1,0 +1,93 @@
+@use "@angular/material" as mat;
+@use 'variables/colors' as colors;
+
+@include mat.core();
+
+$prune-palette: (
+ 50: colors.$cv-color-prune-50,
+ 100: colors.$cv-color-prune-100,
+ 200: colors.$cv-color-prune-200,
+ 300: colors.$cv-color-prune-300,
+ 400: colors.$cv-color-prune-400,
+ 500: colors.$cv-color-prune-500,
+ 600: colors.$cv-color-prune-600,
+ 700: colors.$cv-color-prune-700,
+ 800: colors.$cv-color-prune-800,
+ 900: colors.$cv-color-prune-900,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: colors.$cv-color-orange-50,
+   400: colors.$cv-color-orange-50,
+   500: colors.$cv-color-orange-50,
+   600: colors.$cv-color-orange-50,
+   700: colors.$cv-color-orange-50,
+   800: colors.$cv-color-orange-50,
+   900: colors.$cv-color-orange-50,
+ )
+);
+
+$purple-palette: (
+  50: colors.$cv-color-purple-50,
+  100: colors.$cv-color-purple-100,
+  200: colors.$cv-color-purple-200,
+  300: colors.$cv-color-purple-300,
+  400: colors.$cv-color-purple-400,
+  500: colors.$cv-color-purple-500,
+  600: colors.$cv-color-purple-600,
+  700: colors.$cv-color-purple-700,
+  800: colors.$cv-color-purple-800,
+  900: colors.$cv-color-purple-900,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: colors.$cv-color-orange-50,
+   400: colors.$cv-color-orange-50,
+   500: colors.$cv-color-orange-50,
+   600: colors.$cv-color-orange-50,
+   700: colors.$cv-color-orange-50,
+   800: colors.$cv-color-orange-50,
+   900: colors.$cv-color-orange-50,
+ )
+);
+
+$orange-palette: (
+  50: colors.$cv-color-orange-50,
+  100: colors.$cv-color-orange-100,
+  200: colors.$cv-color-orange-200,
+  300: colors.$cv-color-orange-300,
+  400: colors.$cv-color-orange-400,
+  500: colors.$cv-color-orange-500,
+  600: colors.$cv-color-orange-600,
+  700: colors.$cv-color-orange-700,
+  800: colors.$cv-color-orange-800,
+  900: colors.$cv-color-orange-900,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: colors.$cv-color-prune-900,
+   400: colors.$cv-color-prune-900,
+   500: colors.$cv-color-prune-900,
+   600: colors.$cv-color-prune-900,
+   700: colors.$cv-color-prune-900,
+   800: colors.$cv-color-prune-900,
+   900: colors.$cv-color-prune-900,
+ )
+);
+
+$cv-primary: mat.define-palette($prune-palette, 900);
+$cv-accent: mat.define-palette($purple-palette, 800);
+$cv-warn: mat.define-palette($orange-palette, 600);
+
+$cv-theme: mat.define-dark-theme((
+  color: (
+    primary: $cv-primary,
+    accent: $cv-accent,
+    warn: $cv-warn
+  )
+));
+
+@include mat.all-component-themes($cv-theme);

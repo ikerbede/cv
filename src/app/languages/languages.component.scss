@@ -1,0 +1,39 @@
+$componentId: 'languages';
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.#{$componentId} {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  color: var(--cv-text-color-primary);
+  list-style: none;
+
+  &-item {
+    margin: 0 var(--cv-dim-s);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-spinner {
+      margin-bottom: 8px;
+    }
+
+    &-progress-value {
+      position: relative;
+      top: 54px;
+    }
+
+    &-even {
+      margin-right: var(--cv-dim-sm);
+    }
+  }
+}

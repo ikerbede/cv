@@ -1,0 +1,19 @@
+$componentId: 'experience';
+
+:host {
+  display: flex;
+}
+
+.#{$componentId} {
+  &-main-left {
+    transform-origin: center left;
+  }
+
+  &-main-center {
+    transform-origin: center center;
+  }
+
+  &-main-right {
+    transform-origin: center right;
+  }
+}

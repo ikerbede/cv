@@ -1,0 +1,20 @@
+<cv-experience-company
+  class="experience-company mat-elevation-z8"
+  [employerLogo]="project.employer.logo"
+  [clientLogo]="project.client?.logo"
+  [width]="300"
+  (mouseenter)="onMouseEnter($event)"
+  (mouseleave)="onMouseLeave('company')"
+  (click)="displayDetails()"
+></cv-experience-company>
+<cv-experience-main
+  @displayMain
+  *ngIf="showMain"
+  class="mat-elevation-z8"
+  [ngClass]="'experience-main-' + position"
+  [style.top.px]="mainTop"
+  [style.left.px]="mainLeft"
+  [project]="project"
+  (expand)="displayDetails()"
+  (mouseleave)="onMouseLeave('main')"
+></cv-experience-main>

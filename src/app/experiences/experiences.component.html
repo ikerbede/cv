@@ -1,0 +1,42 @@
+<div class="experiences-line experiences-line-first">
+  <ng-container *ngIf="(isMobile$ | async) === false">
+    <cv-experience
+      *ngFor="
+        let project of projects.slice(0, 3);
+        first as isFirst;
+        last as isLast
+      "
+      [position]="isFirst ? 'left' : isLast ? 'right' : 'center'"
+      [project]="project"
+      [showMain]="focusedProject === project.id"
+      (focused)="displayMainInfos($event, project.id)"
+    ></cv-experience>
+  </ng-container>
+  <ng-container *ngIf="isMobile$ | async">
+    <cv-experience-mobile
+      *ngFor="let project of projects.slice(0, 3)"
+      [project]="project"
+    ></cv-experience-mobile>
+  </ng-container>
+</div>
+<div class="experiences-line">
+  <ng-container *ngIf="(isMobile$ | async) === false">
+    <cv-experience
+      *ngFor="
+        let project of projects.slice(3, 6);
+        first as isFirst;
+        last as isLast
+      "
+      [position]="isFirst ? 'left' : isLast ? 'right' : 'center'"
+      [project]="project"
+      [showMain]="focusedProject === project.id"
+      (focused)="displayMainInfos($event, project.id)"
+    ></cv-experience>
+  </ng-container>
+  <ng-container *ngIf="isMobile$ | async">
+    <cv-experience-mobile
+      *ngFor="let project of projects.slice(3, 6)"
+      [project]="project"
+    ></cv-experience-mobile>
+  </ng-container>
+</div>

@@ -1,0 +1,52 @@
+@use '../../assets/styles/breakpoints' as breakpoints;
+@use '../../assets/styles/mixins' as mixins;
+
+$componentId: 'global';
+
+.#{$componentId} {
+  &-offset {
+    height: var(--cv-dim-xxl);
+  }
+
+  &-picture {
+    width: 100%;
+    height: calc(100vw * 810 / 1080);
+    background-image: url('../../assets/wallpapers/alone_rando_purple.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-content {
+    background-color: var(--cv-color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-section {
+    width: 100%;
+    padding: var(--cv-dim-xl) 5%;
+    margin-bottom: var(--cv-dim-xl);
+    @include mixins.border-box;
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: var(--cv-dim-xxl);
+      color: var(--cv-color-tertiary);
+      font-size: var(--cv-dim-l);
+    }
+  }
+
+  &-school {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: breakpoints.$cv-breakpoint-s-max-width) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "name": "cv",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/cv/src",
+  "prefix": "cv",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/cv",
+        "index": "apps/cv/src/index.html",
+        "main": "apps/cv/src/main.ts",
+        "polyfills": "apps/cv/src/polyfills.ts",
+        "tsConfig": "apps/cv/tsconfig.app.json",
+        "assets": [
+          "apps/cv/src/favicon.ico",
+          "apps/cv/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/shared/src/assets",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "apps/cv/src/assets/styles/cv-theme.scss",
+          "apps/cv/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/cv/src/environments/environment.ts",
+              "with": "apps/cv/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "cv:build:production"
+        },
+        "development": {
+          "browserTarget": "cv:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4300
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "cv:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/cv/**/*.ts", "apps/cv/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/cv"],
+      "options": {
+        "jestConfig": "apps/cv/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["cv"]
+}

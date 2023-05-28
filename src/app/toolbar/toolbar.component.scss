@@ -1,0 +1,21 @@
+$componentId: 'toolbar';
+
+.#{$componentId} {
+  height: var(--cv-dim-xxl);
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+
+  &-nav-tab {
+    font-size: var(--cv-dim-s)
+  }
+
+  &-actions {
+    display: flex;
+  }
+
+  mat-icon {
+    color: var(--cv-text-color-primary);
+  }
+}

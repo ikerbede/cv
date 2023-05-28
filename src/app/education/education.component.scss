@@ -1,0 +1,33 @@
+$componentId: 'education';
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.#{$componentId} {
+  &-courses {
+    margin: 0;
+    padding: 0;
+  }
+  &-course {
+    display: flex;
+    align-items: center;
+
+    &-details {
+      margin-left: var(--cv-dim-xl);
+      display: flex;
+      flex-direction: column;
+
+      color: var(--cv-text-color-primary);
+
+      h3 {
+        margin-top: 0;
+        font-size: var(--cv-font-size-l);
+      }
+    }
+  }
+  &-course:first-of-type {
+    margin-bottom: var(--cv-dim-sm);
+  }
+}

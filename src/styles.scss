@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'assets/styles/variables/dimensions';
+@use 'assets/styles/variables/main';
+@use 'assets/styles/variables/colors' as colors;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: colors.$cv-color-prune-800;
+  font-family: Roboto, sans-serif;
+  font-size: var(--cv-font-size);
+  line-height: var(--cv-line-height);
+}
+
+button.mat-fab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mat-icon {
+    width: var(--cv-dim-xl);
+    height: var(--cv-dim-xl);
+  }
+}
+
+.cv-menu {
+  background-color: colors.$cv-color-orange-50;
+
+  .mat-mdc-menu-item .mat-icon, .mat-mdc-menu-item .mdc-list-item__primary-text {
+    color: var(--cv-color-primary);
+  }
+}
+
+.cv-dialog > .mat-mdc-dialog-container {
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.cv-bottom-sheet > .mat-bottom-sheet-container {
+  padding: 0;
+}
+
+.cv-icon-label {
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+

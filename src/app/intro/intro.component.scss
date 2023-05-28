@@ -1,0 +1,59 @@
+@use '../../assets/styles/breakpoints' as breakpoints;
+
+$componentId: 'intro';
+
+.#{$componentId} {
+  width: 100%;
+  margin: 5vw 0 0 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+
+  @media (max-width: breakpoints.$cv-breakpoint-xs-max-width) {
+    margin: -20px 0 0 0;
+  }
+
+  @media (min-width: breakpoints.$cv-breakpoint-s-min-width) and (max-width: breakpoints.$cv-breakpoint-s-max-width) {
+    margin: 0;
+  }
+
+  @media (min-width: breakpoints.$cv-breakpoint-m-min-width) and (max-width: breakpoints.$cv-breakpoint-m-max-width) {
+    margin: 20px 0 0 0;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &-badge {
+      margin-right: var(--cv-dim-s);
+
+      @media (max-width: breakpoints.$cv-breakpoint-xs-max-width) {
+        width: var(--cv-dim-m);
+        height: var(--cv-dim-m);
+        margin-right: var(--cv-dim-xs);
+      }
+
+      &-icon {
+        color: var(--cv-color-tertiary);
+
+        @media (max-width: breakpoints.$cv-breakpoint-xs-max-width) {
+          width: var(--cv-dim-s);
+          height: var(--cv-dim-s);
+        }
+      }
+    }
+
+    &-text {
+      color: var(--cv-color-primary);
+      font-size: 2vw;
+      font-weight: 900;
+
+      @media (max-width: breakpoints.$cv-breakpoint-xs-max-width) {
+        font-size: var(--cv-font-size);
+      }
+    }
+  }
+}

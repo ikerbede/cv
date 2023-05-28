@@ -1,0 +1,8 @@
+<ul class="techs">
+  <li class="tech" *ngFor="let tech of techs">
+    <a [href]="tech.link" target="_blank" class="tech-link">
+      <img [src]="tech.logo" [alt]="tech.name" width="100px" height="100px" />
+      <p class="tech-link-legend">{{ tech.name }}</p>
+    </a>
+  </li>
+</ul>

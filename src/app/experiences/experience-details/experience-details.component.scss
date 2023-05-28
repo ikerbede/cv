@@ -1,0 +1,92 @@
+@use '../../../assets/styles/variables/colors' as colors;
+@use '../../../assets/styles/mixins' as mixins;
+
+$componentId: 'experience-details';
+
+.#{$componentId} {
+  &-header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    &-employer, &-client {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-employer {
+      height: 200px;
+      background: linear-gradient(colors.$cv-color-orange-600, colors.$cv-color-orange-400 50%, colors.$cv-color-orange-200 80%, colors.$cv-color-orange-50);
+    }
+
+    &-employer.employer-not-alone {
+      height: 80px;
+      background: linear-gradient(colors.$cv-color-orange-600, colors.$cv-color-orange-400);
+    }
+
+    &-client {
+      height: 120px;
+      background: linear-gradient(colors.$cv-color-orange-400, colors.$cv-color-orange-300 50%, colors.$cv-color-orange-200, colors.$cv-color-orange-50);
+    }
+  }
+
+  &-content {
+    padding: var(--cv-dim-s) var(--cv-dim-xl);
+    @include mixins.border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-roles {
+      margin: 0;
+    }
+
+    &-techs {
+      margin: var(--cv-dim-s) 0;
+
+      &-chip {
+        background-color: var(--cv-color-secondary) !important;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-divider {
+    padding: var(--cv-dim-sm) var(--cv-dim-xl);
+
+    mat-divider {
+      border-color: var(--cv-color-primary);
+    }
+  }
+
+  &-footer {
+    padding: var(--cv-dim-sm) var(--cv-dim-xl);
+    @include mixins.border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4 {
+      margin: 0;
+    }
+
+    &-facts {
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &-content, &-divider, &-footer {
+    color: var(--cv-color-primary);
+    background-color: colors.$cv-color-orange-50;
+  }
+}

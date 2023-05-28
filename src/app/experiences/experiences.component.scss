@@ -1,0 +1,12 @@
+$componentId: 'experiences';
+
+.#{$componentId} {
+  &-line {
+    display: flex;
+    justify-content: space-around;
+
+    &-first {
+      margin-bottom: var(--cv-dim-xl);
+    }
+  }
+}
