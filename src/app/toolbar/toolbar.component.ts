@@ -36,7 +36,7 @@ import { ContactComponent } from '../contact/contact.component';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
-  readonly anchors = ['techs', 'experience', 'education'];
+  readonly anchors = ['techs', 'experience', 'publications', 'education'];
   isMobile$: Observable<boolean>;
 
   constructor(

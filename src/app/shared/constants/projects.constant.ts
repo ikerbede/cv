@@ -2,6 +2,29 @@ import { Project } from '../models/project.model';
 
 export const PROJECTS: readonly Project[] = [
   {
+    id: 7,
+    icon: 'account_balance',
+    client: {
+      name: 'Bpifrance',
+      logo: 'assets/logos/bpifrance.png.webp',
+      link: 'https://www.bpifrance.fr/',
+    },
+    employer: {
+      name: 'ekino.',
+      logo: 'assets/logos/ekino.png',
+      link: 'https://www.ekino.com/',
+    },
+    description: 'Evolution of bank websites',
+    relevantFacts: [
+      'Support to less experienced developers',
+      'Angular migrations',
+    ],
+    place: 'full remote, Paris, FRANCE',
+    period: '2023 February ➝ Today',
+    roles: ['Senior frontend developer'],
+    techs: ['Angular', 'Jasmine'],
+  },
+  {
     id: 6,
     icon: 'local_shipping',
     employer: {

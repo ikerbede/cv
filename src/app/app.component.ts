@@ -16,7 +16,6 @@ export class AppComponent {
   constructor(private readonly iconService: IconService) {
     this.iconService.addIcons([
       'anchor',
-      'angular',
       'business',
       'check',
       'code',
@@ -26,10 +25,8 @@ export class AppComponent {
       'email',
       'expand_more',
       'favorite',
-      'github',
       'insights',
       'language',
-      'linkedin',
       'location_searching',
       'more_vert',
       'phone',
@@ -37,5 +34,6 @@ export class AppComponent {
       'school',
       'search',
     ]);
+    this.iconService.addLogos(['angular', 'github', 'linkedin', 'medium']);
   }
 }

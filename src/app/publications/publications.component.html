@@ -1,0 +1,23 @@
+<ul class="publications">
+  <li class="publications-item" *ngFor="let publication of publications">
+    <article
+      class="publications-item-article"
+      (click)="readArticle(publication.url)"
+    >
+      <img
+        class="publications-item-article-image"
+        [src]="publication.imageUrl"
+        *ngIf="publication.imageUrl"
+      />
+      <section class="publications-item-article-content">
+        <header class="publications-item-article-content-header">
+          <h3>{{ publication.title }}</h3>
+          <time [dateTime]="publication.date">{{
+            publication.date | date
+          }}</time>
+        </header>
+        <p>{{ publication.description }}</p>
+      </section>
+    </article>
+  </li>
+</ul>
