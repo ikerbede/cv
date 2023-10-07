@@ -1,44 +1,52 @@
 @use '../../assets/styles/variables/colors' as colors;
-@use '../../assets/styles/mixins' as mixins;
 
 $componentId: 'publications';
 
 .#{$componentId} {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: var(--cv-dim-m);
 
   list-style: none;
-  cursor: pointer;
 
   &-item {
-    &-article {
-      height: 100px;
-      display: flex;
-      background: linear-gradient(
-        colors.$cv-color-orange-600,
-        colors.$cv-color-orange-400
-      );
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$cv-color-green-500;
+    border-radius: var(--cv-dim-xs);
 
-      &-image {
-        height: 100%;
-        width: auto;
+    &-image-container {
+      width: 100%;
+      height: 170px;
+
+      display: flex;
+      justify-content: center;
+
+      border-radius: var(--cv-dim-xs);
+      background-color: var(--cv-text-color-primary);
+    }
+
+    &-image {
+      width: 260px;
+    }
+
+    &-content {
+      padding: var(--cv-dim-s);
+
+      color: var(--cv-color-primary);
+
+      p {
+        margin: 0;
+        font-size: small;
       }
 
-      &-content {
-        width: 100%;
-        padding: var(--cv-dim-s) var(--cv-dim-xl);
-        @include mixins.border-box;
-
-        &-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          h3 {
-            margin: 0;
-          }
-        }
+      time {
+        font-size: x-small;
       }
     }
   }

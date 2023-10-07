@@ -1,4 +1,14 @@
-:host {
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.sidenav-content-main {
+  padding: var(--cv-dim-m);
+  overflow: auto;
 }

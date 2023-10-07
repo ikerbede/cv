@@ -1,93 +1,95 @@
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
 @use 'variables/colors' as colors;
 
 @include mat.core();
 
-$prune-palette: (
- 50: colors.$cv-color-prune-50,
- 100: colors.$cv-color-prune-100,
- 200: colors.$cv-color-prune-200,
- 300: colors.$cv-color-prune-300,
- 400: colors.$cv-color-prune-400,
- 500: colors.$cv-color-prune-500,
- 600: colors.$cv-color-prune-600,
- 700: colors.$cv-color-prune-700,
- 800: colors.$cv-color-prune-800,
- 900: colors.$cv-color-prune-900,
- contrast: (
-   50: rgba(black, 0.87),
-   100: rgba(black, 0.87),
-   200: rgba(black, 0.87),
-   300: colors.$cv-color-orange-50,
-   400: colors.$cv-color-orange-50,
-   500: colors.$cv-color-orange-50,
-   600: colors.$cv-color-orange-50,
-   700: colors.$cv-color-orange-50,
-   800: colors.$cv-color-orange-50,
-   900: colors.$cv-color-orange-50,
- )
+$brun-palette: (
+  50: colors.$cv-color-brun-50,
+  100: colors.$cv-color-brun-100,
+  200: colors.$cv-color-brun-200,
+  300: colors.$cv-color-brun-300,
+  400: colors.$cv-color-brun-400,
+  500: colors.$cv-color-brun-500,
+  600: colors.$cv-color-brun-600,
+  700: colors.$cv-color-brun-700,
+  800: colors.$cv-color-brun-800,
+  900: colors.$cv-color-brun-900,
+  contrast: (
+    50: colors.$cv-color-brun-500,
+    100: colors.$cv-color-brun-500,
+    200: colors.$cv-color-brun-500,
+    300: colors.$cv-color-beige,
+    400: colors.$cv-color-beige,
+    500: colors.$cv-color-beige,
+    600: colors.$cv-color-beige,
+    700: colors.$cv-color-beige,
+    800: colors.$cv-color-beige,
+    900: colors.$cv-color-beige,
+  ),
 );
 
-$purple-palette: (
-  50: colors.$cv-color-purple-50,
-  100: colors.$cv-color-purple-100,
-  200: colors.$cv-color-purple-200,
-  300: colors.$cv-color-purple-300,
-  400: colors.$cv-color-purple-400,
-  500: colors.$cv-color-purple-500,
-  600: colors.$cv-color-purple-600,
-  700: colors.$cv-color-purple-700,
-  800: colors.$cv-color-purple-800,
-  900: colors.$cv-color-purple-900,
- contrast: (
-   50: rgba(black, 0.87),
-   100: rgba(black, 0.87),
-   200: rgba(black, 0.87),
-   300: colors.$cv-color-orange-50,
-   400: colors.$cv-color-orange-50,
-   500: colors.$cv-color-orange-50,
-   600: colors.$cv-color-orange-50,
-   700: colors.$cv-color-orange-50,
-   800: colors.$cv-color-orange-50,
-   900: colors.$cv-color-orange-50,
- )
+$green-palette: (
+  50: colors.$cv-color-green-50,
+  100: colors.$cv-color-green-100,
+  200: colors.$cv-color-green-200,
+  300: colors.$cv-color-green-300,
+  400: colors.$cv-color-green-400,
+  500: colors.$cv-color-green-500,
+  600: colors.$cv-color-green-600,
+  700: colors.$cv-color-green-700,
+  800: colors.$cv-color-green-800,
+  900: colors.$cv-color-green-900,
+  contrast: (
+    50: colors.$cv-color-brun-500,
+    100: colors.$cv-color-brun-500,
+    200: colors.$cv-color-brun-500,
+    300: colors.$cv-color-brun-500,
+    400: colors.$cv-color-brun-500,
+    500: colors.$cv-color-brun-500,
+    600: colors.$cv-color-brun-500,
+    700: colors.$cv-color-brun-500,
+    800: colors.$cv-color-brun-500,
+    900: colors.$cv-color-brun-500,
+  ),
 );
 
-$orange-palette: (
-  50: colors.$cv-color-orange-50,
-  100: colors.$cv-color-orange-100,
-  200: colors.$cv-color-orange-200,
-  300: colors.$cv-color-orange-300,
-  400: colors.$cv-color-orange-400,
-  500: colors.$cv-color-orange-500,
-  600: colors.$cv-color-orange-600,
-  700: colors.$cv-color-orange-700,
-  800: colors.$cv-color-orange-800,
-  900: colors.$cv-color-orange-900,
- contrast: (
-   50: rgba(black, 0.87),
-   100: rgba(black, 0.87),
-   200: rgba(black, 0.87),
-   300: colors.$cv-color-prune-900,
-   400: colors.$cv-color-prune-900,
-   500: colors.$cv-color-prune-900,
-   600: colors.$cv-color-prune-900,
-   700: colors.$cv-color-prune-900,
-   800: colors.$cv-color-prune-900,
-   900: colors.$cv-color-prune-900,
- )
+$violet-palette: (
+  50: colors.$cv-color-violet-50,
+  100: colors.$cv-color-violet-100,
+  200: colors.$cv-color-violet-200,
+  300: colors.$cv-color-violet-300,
+  400: colors.$cv-color-violet-400,
+  500: colors.$cv-color-violet-500,
+  600: colors.$cv-color-violet-600,
+  700: colors.$cv-color-violet-700,
+  800: colors.$cv-color-violet-800,
+  900: colors.$cv-color-violet-900,
+  contrast: (
+    50: colors.$cv-color-brun-500,
+    100: colors.$cv-color-brun-500,
+    200: colors.$cv-color-brun-500,
+    300: colors.$cv-color-brun-500,
+    400: colors.$cv-color-brun-500,
+    500: colors.$cv-color-brun-500,
+    600: colors.$cv-color-brun-500,
+    700: colors.$cv-color-brun-500,
+    800: colors.$cv-color-brun-500,
+    900: colors.$cv-color-brun-500,
+  ),
 );
 
-$cv-primary: mat.define-palette($prune-palette, 900);
-$cv-accent: mat.define-palette($purple-palette, 800);
-$cv-warn: mat.define-palette($orange-palette, 600);
+$cv-primary: mat.define-palette($brun-palette, 900);
+$cv-accent: mat.define-palette($green-palette, 800);
+$cv-warn: mat.define-palette($violet-palette, 600);
 
-$cv-theme: mat.define-dark-theme((
-  color: (
-    primary: $cv-primary,
-    accent: $cv-accent,
-    warn: $cv-warn
+$cv-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $cv-primary,
+      accent: $cv-accent,
+      warn: $cv-warn,
+    ),
   )
-));
+);
 
 @include mat.all-component-themes($cv-theme);

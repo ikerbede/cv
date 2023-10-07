@@ -12,8 +12,4 @@ import { PUBLICATIONS_MEDIUM } from './publications.constant';
 })
 export class PublicationsComponent {
   publications: readonly Publication[] = PUBLICATIONS_MEDIUM;
-
-  readArticle(url: string): void {
-    window.open(url, '_blank');
-  }
 }

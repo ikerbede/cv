@@ -124,7 +124,7 @@ export const PROJECTS: readonly Project[] = [
     icon: 'flight',
     client: {
       name: 'Rénodoc',
-      logo: 'assets/logos/armee_air.png',
+      logo: 'assets/logos/armee_air.svg',
       link: 'https://air.defense.gouv.fr/',
     },
     employer: {

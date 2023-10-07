@@ -1,18 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'assets/styles/variables/dimensions';
 @use 'assets/styles/variables/main';
+@use 'assets/styles/mixins' as mixins;
 @use 'assets/styles/variables/colors' as colors;
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  background-color: colors.$cv-color-prune-800;
+  background-color: colors.$cv-color-brun-800;
   font-family: Roboto, sans-serif;
   font-size: var(--cv-font-size);
   line-height: var(--cv-line-height);
+}
+
+* {
+  @include mixins.border-box;
 }
 
 button.mat-fab {
@@ -27,9 +33,10 @@ button.mat-fab {
 }
 
 .cv-menu {
-  background-color: colors.$cv-color-orange-50;
+  background-color: colors.$cv-color-green-50;
 
-  .mat-mdc-menu-item .mat-icon, .mat-mdc-menu-item .mdc-list-item__primary-text {
+  .mat-mdc-menu-item .mat-icon,
+  .mat-mdc-menu-item .mdc-list-item__primary-text {
     color: var(--cv-color-primary);
   }
 }
@@ -51,5 +58,3 @@ button.mat-fab {
     margin-right: 8px;
   }
 }
-
-

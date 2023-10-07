@@ -1,5 +1,4 @@
 @use '../../../assets/styles/variables/colors' as colors;
-@use '../../../assets/styles/mixins' as mixins;
 
 $componentId: 'experience-main';
 
@@ -18,7 +17,8 @@ $componentId: 'experience-main';
     display: flex;
     flex-direction: column;
 
-    &-employer, &-client {
+    &-employer,
+    &-client {
       width: 100%;
 
       display: flex;
@@ -28,24 +28,36 @@ $componentId: 'experience-main';
 
     &-employer {
       height: 100%;
-      background: linear-gradient(colors.$cv-color-orange-600, colors.$cv-color-orange-400 50%, colors.$cv-color-orange-200 80%, colors.$cv-color-orange-50);
+      background: linear-gradient(
+        colors.$cv-color-green-600,
+        colors.$cv-color-green-400 50%,
+        colors.$cv-color-green-200 80%,
+        colors.$cv-color-green-50
+      );
     }
 
     &-employer.employer-not-alone {
       height: 40%;
-      background: linear-gradient(colors.$cv-color-orange-600, colors.$cv-color-orange-400);
+      background: linear-gradient(
+        colors.$cv-color-green-600,
+        colors.$cv-color-green-400
+      );
     }
 
     &-client {
       height: 60%;
-      background: linear-gradient(colors.$cv-color-orange-400, colors.$cv-color-orange-300 50%, colors.$cv-color-orange-200, colors.$cv-color-orange-50);
+      background: linear-gradient(
+        colors.$cv-color-green-400,
+        colors.$cv-color-green-300 50%,
+        colors.$cv-color-green-200,
+        colors.$cv-color-green-50
+      );
     }
-   }
+  }
 
   &-content {
     height: 300px;
     padding: var(--cv-dim-s);
-    @include mixins.border-box;
 
     display: flex;
     flex-direction: column;

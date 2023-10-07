@@ -1,14 +1,19 @@
 $componentId: 'toolbar';
 
-.#{$componentId} {
+:host {
   height: var(--cv-dim-xxl);
+}
+
+.#{$componentId} {
   position: fixed;
   z-index: 2;
   display: flex;
   justify-content: space-between;
 
+  background-color: var(--cv-color-primary);
+
   &-nav-tab {
-    font-size: var(--cv-dim-s)
+    font-size: var(--cv-dim-s);
   }
 
   &-actions {

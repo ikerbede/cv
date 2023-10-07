@@ -1,40 +1,48 @@
-$cv-color-prune-50: #f1e3e4;
-$cv-color-prune-100: #d0bbbf;
-$cv-color-prune-200: #ab9096;
-$cv-color-prune-300: #88666e;
-$cv-color-prune-400: #6f4852;
-$cv-color-prune-500: #572b38;
-$cv-color-prune-600: #4c2431;
-$cv-color-prune-700: #3e1a26;
-$cv-color-prune-800: #2e101d;
-$cv-color-prune-900: #210011;
+$cv-color-brun-50: #e5e5e5;
+$cv-color-brun-100: #bebdbe;
+$cv-color-brun-200: #939192;
+$cv-color-brun-300: #686566;
+$cv-color-brun-400: #474446;
+$cv-color-brun-500: #272325;
+$cv-color-brun-600: #231f21;
+$cv-color-brun-700: #1d1a1b;
+$cv-color-brun-800: #171516;
+$cv-color-brun-900: #0e0c0d;
 
-$cv-color-purple-50: #f6e1e7;
-$cv-color-purple-100: #eab5c3;
-$cv-color-purple-200: #db869d;
-$cv-color-purple-300: #cd5978;
-$cv-color-purple-400: #c23c5f;
-$cv-color-purple-500: #b82248;
-$cv-color-purple-600: #a92045;
-$cv-color-purple-700: #941d41;
-$cv-color-purple-800: #80193c;
-$cv-color-purple-900: #5c1533;
+$cv-color-beige: #fff6e6;
 
-$cv-color-orange-50: #fde9e7;
-$cv-color-orange-100: #ffcbbc;
-$cv-color-orange-200: #ffa990;
-$cv-color-orange-300: #ff8664;
-$cv-color-orange-400: #ff6942;
-$cv-color-orange-500: #ff4c20;
-$cv-color-orange-600: #ff461c;
-$cv-color-orange-700: #f13e16;
-$cv-color-orange-800: #e33612;
-$cv-color-orange-900: #ca2706;
+$cv-color-green-50: #eafdf9;
+$cv-color-green-100: #cbfbef;
+$cv-color-green-200: #a8f9e5;
+$cv-color-green-300: #85f6da;
+$cv-color-green-400: #6bf4d2;
+$cv-color-green-500: #51f2ca;
+$cv-color-green-600: #4af0c5;
+$cv-color-green-700: #40eebd;
+$cv-color-green-800: #37ecb7;
+$cv-color-green-900: #27e8ab;
+
+$cv-color-violet-50: #f6f2fd;
+$cv-color-violet-100: #eae0fa;
+$cv-color-violet-200: #dccbf7;
+$cv-color-violet-300: #cdb6f4;
+$cv-color-violet-400: #c3a6f1;
+$cv-color-violet-500: #b896ef;
+$cv-color-violet-600: #b18eed;
+$cv-color-violet-700: #a883eb;
+$cv-color-violet-800: #a079e8;
+$cv-color-violet-900: #9168e4;
+
+$cv-color-primary: $cv-color-brun-500;
+$cv-color-secondary: $cv-color-green-500;
+$v-color-tertiary: $cv-color-violet-500;
+
+$cv-text-color-primary: $cv-color-beige;
 
 :root {
-  --cv-color-primary: #210011;
-  --cv-color-secondary: #5c1533;
-  --cv-color-tertiary: #ff461c;
+  --cv-color-primary: #272325;
+  --cv-color-secondary: #51f2ca;
+  --cv-color-tertiary: #b896ef;
 
-  --cv-text-color-primary: #fde9e7;
+  --cv-text-color-primary: #fff6e6;
 }

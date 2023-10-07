@@ -1,28 +1,28 @@
 <div class="experience-details-header">
   <a
-    [href]="data.project.employer.link"
+    [href]="experience.employer.link"
     target="_blank"
     class="experience-details-header-employer"
-    [class.employer-not-alone]="!!data.project.client"
+    [class.employer-not-alone]="!!experience.client"
   >
-    <img [src]="data.project.employer.logo" width="200px" />
+    <img [src]="experience.employer.logo" width="200px" />
   </a>
   <a
-    [href]="data.project.employer.link"
+    [href]="experience.employer.link"
     target="_blank"
     class="experience-details-header-client"
-    *ngIf="data.project.client"
+    *ngIf="experience.client"
   >
-    <img [src]="data.project.client.logo" width="200px" />
+    <img [src]="experience.client.logo" width="200px" />
   </a>
   <div
     class="experience-details-header-gradient"
-    [class.gradient-client]="!!data.project.client"
+    [class.gradient-client]="!!experience.client"
   ></div>
 </div>
 <div class="experience-details-content">
   <p class="experience-details-content-roles">
-    <span *ngFor="let role of data.project.roles; last as isLast">
+    <span *ngFor="let role of experience.roles; last as isLast">
       <strong>{{ role }}</strong>
       <strong *ngIf="!isLast"> & </strong>
     </span>
@@ -31,7 +31,7 @@
     <mat-chip
       class="experience-details-content-techs-chip"
       color="accent"
-      *ngFor="let tech of data.project.techs"
+      *ngFor="let tech of experience.techs"
     >
       {{ tech }}
     </mat-chip>
@@ -39,11 +39,11 @@
   <div class="experience-details-content-footer">
     <div class="cv-icon-label">
       <mat-icon [svgIcon]="'place'"></mat-icon>
-      <span>{{ data.project.place }}</span>
+      <span>{{ experience.place }}</span>
     </div>
     <div class="cv-icon-label">
       <mat-icon [svgIcon]="'date_range'"></mat-icon>
-      <span>{{ data.project.period }}</span>
+      <span>{{ experience.period }}</span>
     </div>
   </div>
 </div>
@@ -52,10 +52,10 @@
 </div>
 <div class="experience-details-footer">
   <h4>Description</h4>
-  <p>{{ data.project.description }}</p>
+  <p>{{ experience.description }}</p>
   <h4>Acquired skills</h4>
   <ul class="experience-details-footer-facts">
-    <li class="cv-icon-label" *ngFor="let fact of data.project.relevantFacts">
+    <li class="cv-icon-label" *ngFor="let fact of experience.relevantFacts">
       <mat-icon svgIcon="check"></mat-icon>
       <span>{{ fact }}</span>
     </li>

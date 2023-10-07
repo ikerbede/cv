@@ -5,7 +5,7 @@ import {
 } from '@angular/cdk/layout';
 import { NoopScrollStrategy } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {
   MatBottomSheetModule,
   MatBottomSheet,
@@ -36,6 +36,8 @@ import { ContactComponent } from '../contact/contact.component';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
+  @Output() menuBtnClicked = new EventEmitter<void>();
+
   readonly anchors = ['techs', 'experience', 'publications', 'education'];
   isMobile$: Observable<boolean>;
 
@@ -56,15 +58,8 @@ export class ToolbarComponent {
       );
   }
 
-  scrollTo(eltId: string): void {
-    const element = document.getElementById(eltId);
-    setTimeout(() =>
-      element?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest',
-      })
-    );
+  openSidenav(): void {
+    this.menuBtnClicked.emit();
   }
 
   openContactSheet(): void {
