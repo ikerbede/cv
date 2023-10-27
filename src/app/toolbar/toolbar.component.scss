@@ -5,7 +5,6 @@ $componentId: 'toolbar';
 }
 
 .#{$componentId} {
-  position: fixed;
   z-index: 2;
   display: flex;
   justify-content: space-between;

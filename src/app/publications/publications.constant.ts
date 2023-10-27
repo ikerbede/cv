@@ -8,8 +8,7 @@ export const PUBLICATIONS_MEDIUM: readonly Publication[] = [
       'The goal of this article is to show a clean way to code a reusable form section, as it could be shared by the design system of your organisation for example',
     url: 'https://medium.com/@iker.bedecarrax/make-your-angular-forms-robust-and-reusable-using-controlvalueaccessor-d3c23e8bdf7',
     date: new Date('2023-01-26'),
-    imageUrl:
-      'https://miro.medium.com/v2/resize:fit:720/format:webp/1*2Ph1l_5CndluqCVXwUzAFw.png',
+    imageUrl: 'assets/wallpapers/puzzle.jpeg',
   },
   {
     title: 'Implementing state management in an Angular complex app',
@@ -17,7 +16,6 @@ export const PUBLICATIONS_MEDIUM: readonly Publication[] = [
       'This article explains what is a state manager, how does it work and why should complex applications use it',
     url: 'https://medium.com/shippeo-tech-blog/implementing-state-management-in-an-angular-complex-app-a613ebe76c5d',
     date: new Date('2022-10-27'),
-    imageUrl:
-      'https://miro.medium.com/v2/resize:fit:720/format:webp/1*xmjsLiRnPD3z92Ki0dOgUQ.png',
+    imageUrl: 'assets/wallpapers/library.jpeg',
   },
 ];

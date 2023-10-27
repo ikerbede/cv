@@ -1,17 +1,20 @@
-<div class="profile-picture mat-elevation-z8"></div>
-<div class="profile-content">
-  <div class="profile-content-title mat-elevation-z8">
-    <span class="profile-content-title-name">Iker Bédécarrax</span>
-    <span class="profile-content-title-role">ANGULAR DEVELOPER</span>
-  </div>
+<div class="profile-picture">
+  <img src="assets/pictures/ni.jpg" width="800" height="600" />
+</div>
+<article class="profile-content">
+  <header class="profile-content-header">
+    <mat-icon svgIcon="angular"></mat-icon>
+    <h1 class="profile-content-title">ANGULAR DEVELOPER</h1>
+  </header>
   <ul class="profile-content-items">
     <li class="profile-content-item">
       <div class="profile-content-item-icon">
         <mat-icon svgIcon="school"></mat-icon>
       </div>
       <p class="profile-content-item-text">
-        From a starting background in Physics, I have become a thorough Angular
-        developer fond of clean code and up-to-date best practices!
+        From a starting background in Physics, I turned into web computing in
+        2012 and I quickly became a thorough Angular developer fond of clean
+        code and up-to-date best practices!
       </p>
     </li>
     <li class="profile-content-item">
@@ -26,7 +29,7 @@
     </li>
     <li class="profile-content-item">
       <div class="profile-content-item-icon">
-        <mat-icon svgIcon="angular"></mat-icon>
+        <mat-icon svgIcon="my_location"></mat-icon>
       </div>
       <p class="profile-content-item-text">
         As we used to hear, a good engineer is not technology focused as he
@@ -35,17 +38,4 @@
       </p>
     </li>
   </ul>
-  <div class="profile-content-actions">
-    <button mat-raised-button color="warn" (click)="openContactSheet()">
-      CONTACT ME
-    </button>
-    <a
-      href="assets/cv_iker_bedecarrax.pdf"
-      download
-      mat-raised-button
-      color="warn"
-    >
-      DOWNLOAD PDF
-    </a>
-  </div>
-</div>
+</article>

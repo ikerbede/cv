@@ -4,7 +4,6 @@ $componentId: 'profile';
 
 :host {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   @media (max-width: breakpoints.$cv-breakpoint-s-max-width) {
@@ -14,11 +13,13 @@ $componentId: 'profile';
 
 .#{$componentId} {
   &-picture {
-    width: 40%;
-    height: 35vw;
-    background-image: url('../../assets/pictures/ni.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 30vw;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--cv-dim-xs);
   }
 
   &-content {
@@ -29,22 +30,18 @@ $componentId: 'profile';
     display: flex;
     flex-direction: column;
 
-    &-title {
+    &-header {
       margin: 0 var(--cv-dim-sm);
       padding: var(--cv-dim-s) var(--cv-dim-sm);
-      color: var(--cv-text-color-primary);
+      color: var(--cv-color-secondary);
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
 
-      &-name {
-        font-size: var(--cv-font-size-l);
-        font-weight: 600;
-      }
-
-      &-role {
-        color: var(--cv-color-tertiary)
+      mat-icon {
+        width: var(--cv-dim-l);
+        height: var(--cv-dim-l);
+        margin-right: var(--cv-dim-s);
       }
     }
 
@@ -73,15 +70,6 @@ $componentId: 'profile';
         color: var(--cv-text-color-primary);
       }
     }
-
-    &-actions {
-      display: flex;
-      justify-content: center;
-
-      a {
-        margin-left: var(--cv-dim-sm);
-      }
-    }
   }
 
   @media (max-width: breakpoints.$cv-breakpoint-s-max-width) {
@@ -95,7 +83,8 @@ $componentId: 'profile';
       width: 80%;
       margin-left: 0;
 
-      &-title, &-items {
+      &-title,
+      &-items {
         margin: 0;
       }
     }

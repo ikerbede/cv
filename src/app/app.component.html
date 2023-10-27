@@ -1,9 +1,17 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="over" #sidenav>
+  <mat-sidenav
+    [mode]="(isMobile$ | async) ? 'over' : 'side'"
+    [fixedInViewport]="(isMobile$ | async) === false"
+    [opened]="(isMobile$ | async) === false"
+    #sidenav
+  >
     <cv-sidenav></cv-sidenav>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">
-    <cv-toolbar (menuBtnClicked)="sidenav.toggle()"></cv-toolbar>
+    <cv-toolbar
+      [displayMenu]="(isMobile$ | async) ?? false"
+      (menuBtnClicked)="sidenav.toggle()"
+    ></cv-toolbar>
     <div class="sidenav-content-main">
       <router-outlet></router-outlet>
     </div>

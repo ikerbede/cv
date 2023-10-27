@@ -1,10 +1,6 @@
 <ul class="publications">
   <li *ngFor="let publication of publications">
-    <a
-      class="publications-item mat-elevation-z3"
-      target="_blank"
-      [href]="publication.url"
-    >
+    <a class="publications-item" target="_blank" [href]="publication.url">
       <div class="publications-item-image-container">
         <img
           class="publications-item-image"
@@ -13,7 +9,7 @@
         />
       </div>
       <section class="publications-item-content">
-        <p>{{ publication.title }}</p>
+        <h3>{{ publication.title }}</h3>
         <time [dateTime]="publication.date">
           {{ publication.date | date }}
         </time>

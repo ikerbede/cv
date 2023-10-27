@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="toolbar mat-elevation-z2">
-  <button mat-icon-button (click)="openSidenav()">
+  <button mat-icon-button *ngIf="displayMenu" (click)="openSidenav()">
     <mat-icon svgIcon="menu"></mat-icon>
   </button>
   <span>IKER BEDECARRAX</span>
