@@ -21,7 +21,7 @@ export const PROJECTS: readonly Project[] = [
     ],
     place: 'full remote, Paris, FRANCE',
     period: '2023 February ➝ Today',
-    roles: ['Senior frontend developer'],
+    role: 'Senior frontend developer',
     techs: ['Angular', 'Jasmine'],
   },
   {
@@ -40,7 +40,7 @@ export const PROJECTS: readonly Project[] = [
     ],
     place: 'full remote, Paris, FRANCE',
     period: '2022 April ➝ 2022 October',
-    roles: ['Senior frontend developer'],
+    role: 'Senior frontend developer',
     techs: ['Angular', 'Nx', 'Ngrx', 'Jest'],
   },
   {
@@ -68,7 +68,7 @@ export const PROJECTS: readonly Project[] = [
     ],
     place: 'Toulouse, FRANCE',
     period: '2021 April ➝ 2022 March',
-    roles: ['Senior frontend developer'],
+    role: 'Senior frontend developer',
     techs: ['Angular', 'Nx', 'Ngxs', 'Jest'],
   },
   {
@@ -95,7 +95,7 @@ export const PROJECTS: readonly Project[] = [
     ],
     place: 'Toulouse, FRANCE',
     period: '2020 August ➝ 2021 March',
-    roles: ['Angular tech lead'],
+    role: 'Angular tech lead',
     techs: ['Angular', 'Ngxs', 'Material', 'SpringBoot', 'Java', 'Postgres'],
   },
   {
@@ -116,7 +116,7 @@ export const PROJECTS: readonly Project[] = [
     ],
     place: `Puna'auia, TAHITI`,
     period: '2020 February ➝ 2020 March',
-    roles: ['UI designer', 'Frontend architect', 'Frontend developer'],
+    role: 'Whole website production',
     techs: ['Angular', 'Material', 'Digital Ocean'],
   },
   {
@@ -137,11 +137,11 @@ export const PROJECTS: readonly Project[] = [
     relevantFacts: [
       'Led full stack developers to improve Angular skills',
       'Set up whole project renewal architecture in fresh Angular v2',
-      'Responsible for REST and AngularJs/Angular best practices',
+      'Point of contact for REST and AngularJs/Angular best practices',
     ],
     place: 'Bayonne, FRANCE',
     period: '2015 December ➝ 2020 January',
-    roles: ['Full stack developer', 'Angular tech lead'],
+    role: 'Full stack developer',
     techs: [
       'AngularJs',
       'Angular',
@@ -174,7 +174,7 @@ export const PROJECTS: readonly Project[] = [
     ],
     place: 'Bayonne, FRANCE',
     period: '2015 April ➝ 2015 November',
-    roles: ['Full stack developer'],
+    role: 'Full stack developer',
     techs: ['AngularJs', 'Bootstrap', 'Java', 'Oracle'],
   },
 ];

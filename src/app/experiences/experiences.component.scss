@@ -13,48 +13,4 @@ $componentId: 'experiences';
   gap: var(--cv-dim-xs);
 
   list-style: none;
-
-  &-item {
-    padding: 0;
-    width: 100%;
-
-    display: flex;
-
-    background-color: colors.$cv-color-green-500;
-    border: none;
-    border-radius: var(--cv-dim-xs);
-
-    &-image-container {
-      width: 100px;
-      height: 100px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      border-radius: var(--cv-dim-xs);
-      background-color: var(--cv-text-color-primary);
-    }
-
-    &-image {
-      width: 80px;
-    }
-
-    &-content {
-      padding: var(--cv-dim-s);
-      width: calc(100% - 100px);
-      height: 100%;
-
-      color: var(--cv-color-primary);
-
-      &-title {
-        margin: 0;
-        font-size: small;
-      }
-
-      &-period {
-        font-size: x-small;
-      }
-    }
-  }
 }

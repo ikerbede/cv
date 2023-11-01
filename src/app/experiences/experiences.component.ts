@@ -3,11 +3,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PROJECTS } from '../shared/constants/projects.constant';
 import { Project } from '../shared/models/project.model';
 import { ExperienceDetailsComponent } from './experience-details/experience-details.component';
+import { ExperienceItemComponent } from './experience-item/experience-item.component';
 
 @Component({
   selector: 'cv-experiences',
   standalone: true,
-  imports: [CommonModule, ExperienceDetailsComponent],
+  imports: [CommonModule, ExperienceDetailsComponent, ExperienceItemComponent],
   templateUrl: './experiences.component.html',
   styleUrls: ['./experiences.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -3,21 +3,9 @@
 ></cv-experience-details>
 <ul class="experiences">
   <li *ngFor="let project of projects">
-    <button
-      class="experiences-item mat-elevation-z3"
-      type="button"
+    <cv-experience-item
+      [project]="project"
       (click)="selectExperience(project)"
-    >
-      <div class="experiences-item-image-container">
-        <img
-          class="experiences-item-image"
-          [src]="project.client?.logo ?? project.employer.logo"
-        />
-      </div>
-      <section class="experiences-item-content">
-        <p class="experiences-item-content-title">{{ project.roles }}</p>
-        <p class="experiences-item-content-period">{{ project.period }}</p>
-      </section>
-    </button>
+    ></cv-experience-item>
   </li>
 </ul>

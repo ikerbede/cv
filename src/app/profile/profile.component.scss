@@ -14,7 +14,7 @@ $componentId: 'profile';
 .#{$componentId} {
   &-picture {
     width: 30vw;
-    height: 30vw;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;

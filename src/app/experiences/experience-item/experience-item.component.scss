@@ -1,0 +1,46 @@
+@use '../../../assets/styles/variables/colors' as colors;
+
+$componentId: 'experience-item';
+
+.#{$componentId} {
+  width: 300px;
+  padding: 0;
+  display: flex;
+
+  background-color: colors.$cv-color-green-500;
+  border: none;
+  border-radius: var(--cv-dim-xs);
+
+  &-image-container {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--cv-dim-xs);
+    background-color: var(--cv-text-color-primary);
+  }
+
+  &-image {
+    width: 80px;
+  }
+
+  &-content {
+    padding: var(--cv-dim-s);
+    width: 300px;
+    height: 100%;
+
+    color: var(--cv-color-primary);
+
+    &-title {
+      margin-top: 0;
+      text-align: start;
+    }
+
+    &-period {
+      font-size: x-small;
+    }
+  }
+}

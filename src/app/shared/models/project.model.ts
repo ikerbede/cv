@@ -13,6 +13,6 @@ export interface Project {
   relevantFacts: string[];
   place: string;
   period: string;
-  roles: string[];
+  role: string;
   techs: string[];
 }

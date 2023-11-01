@@ -21,11 +21,8 @@
   ></div>
 </div>
 <div class="experience-details-content">
-  <p class="experience-details-content-roles">
-    <span *ngFor="let role of experience.roles; last as isLast">
-      <strong>{{ role }}</strong>
-      <strong *ngIf="!isLast"> & </strong>
-    </span>
+  <p class="experience-details-content-role">
+    <strong>{{ experience.role }}</strong>
   </p>
   <mat-chip-set class="experience-details-content-techs">
     <mat-chip
