@@ -1,16 +1,29 @@
 @use '../../assets/styles/variables/colors' as colors;
 
-$componentId: 'experiences';
-
-.#{$componentId} {
+.experiences {
   margin: 0;
-  margin-top: var(--cv-dim-m);
   padding: 0;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  gap: var(--cv-dim-xs);
-
   list-style: none;
+
+  &-item {
+    &-content {
+      height: 132px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &-infos {
+        margin-left: var(--cv-dim-m);
+        color: var(--cv-text-color-primary);
+
+        &-title {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &-content:hover &-content-infos {
+      color: var(--cv-color-tertiary);
+    }
+  }
 }

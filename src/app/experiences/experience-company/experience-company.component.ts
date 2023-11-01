@@ -20,6 +20,7 @@ import {
 export class ExperienceCompanyComponent implements OnInit, OnChanges {
   @Input() employerLogo!: string;
   @Input() clientLogo?: string;
+  @Input() color: 'primary' | 'secondary' | 'tertiary' = 'primary';
   @Input() width = 300;
   @Input() height = 300;
 

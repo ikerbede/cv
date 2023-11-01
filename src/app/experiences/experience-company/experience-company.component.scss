@@ -1,14 +1,13 @@
-@use '../../../assets/styles/variables/colors' as colors;
+.experience-company {
+  height: 100%;
 
-$componentId: 'experience-company';
-
-:host {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
-}
 
-.#{$componentId} {
+  cursor: pointer;
+  border-radius: var(--cv-dim-xs);
+  overflow: hidden;
+
   &-employer,
   &-client {
     width: 100%;
@@ -20,10 +19,6 @@ $componentId: 'experience-company';
 
   &-employer {
     height: 100%;
-    background: linear-gradient(
-      colors.$cv-color-green-600,
-      colors.$cv-color-green-400
-    );
   }
 
   &-employer.employer-not-alone {
@@ -32,9 +27,17 @@ $componentId: 'experience-company';
 
   &-client {
     height: 60%;
-    background: linear-gradient(
-      colors.$cv-color-green-400,
-      colors.$cv-color-green-300
-    );
   }
+}
+
+.primary {
+  background-color: var(--cv-text-color-primary);
+}
+
+.secondary {
+  background-color: var(--cv-color-secondary);
+}
+
+.tertiary {
+  background-color: var(--cv-color-tertiary);
 }
