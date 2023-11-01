@@ -1,11 +1,11 @@
-$componentId: 'education';
+@use '../../assets/styles/breakpoints' as breakpoints;
 
 :host {
   display: flex;
   justify-content: center;
 }
 
-.#{$componentId} {
+.education {
   &-courses {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ $componentId: 'education';
     align-items: center;
 
     &-details {
-      margin-left: var(--cv-dim-xl);
+      margin-left: var(--cv-dim-m);
       display: flex;
       flex-direction: column;
 
@@ -23,7 +23,14 @@ $componentId: 'education';
 
       h3 {
         margin-top: 0;
-        font-size: var(--cv-font-size-l);
+      }
+
+      @media (max-width: breakpoints.$cv-breakpoint-s-max-width) {
+        font-size: small;
+
+        h3 {
+          font-size: medium;
+        }
       }
     }
   }
