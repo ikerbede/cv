@@ -1,8 +1,9 @@
-<mat-nav-list role="list">
+<mat-nav-list role="list" class="sidenav-navlist">
   <div mat-subheader>Navigation</div>
   <a
     mat-list-item
     role="listitem"
+    class="sidenav-navlist-item"
     *ngFor="let route of routes"
     [routerLink]="route.path"
   >

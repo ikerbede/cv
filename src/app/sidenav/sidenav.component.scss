@@ -1,5 +1,9 @@
-.mat-mdc-list-item {
-  width: 300px;
+.sidenav-navlist {
+  background-color: var(--cv-color-primary);
+
+  &-item {
+    width: 300px;
+  }
 }
 
 .divider-container {
