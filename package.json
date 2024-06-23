@@ -22,8 +22,7 @@
     "@cv/shared-styles": "file:libs/shared/assets/src/lib/styles",
     "@nx/angular": "19.3.1",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~18.0.0",

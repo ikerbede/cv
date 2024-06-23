@@ -1,7 +1,7 @@
 <cv-experience-company
   class="experience-mobile-company mat-elevation-z8"
-  [employerLogo]="project.employer.logo"
-  [clientLogo]="project.client?.logo"
+  [employerLogo]="project().employer.logo"
+  [clientLogo]="project().client?.logo"
   [width]="(width$ | async) || 100"
   [height]="200"
   (click)="displayDetails()"

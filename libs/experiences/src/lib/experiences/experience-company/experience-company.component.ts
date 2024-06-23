@@ -1,13 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  HostBinding,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'cv-experience-company',
@@ -17,23 +9,10 @@ import {
   styleUrls: ['./experience-company.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ExperienceCompanyComponent implements OnInit, OnChanges {
-  @Input() employerLogo!: string;
-  @Input() clientLogo?: string;
-  @Input() color: 'primary' | 'secondary' | 'tertiary' = 'primary';
-  @Input() width = 300;
-  @Input() height = 300;
-
-  @HostBinding('style.width') hostWidth!: string;
-  @HostBinding('style.height') hostHeight!: string;
-
-  ngOnInit(): void {
-    this.hostHeight = `${this.height}px`;
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['width']) {
-      this.hostWidth = `${this.width}px`;
-    }
-  }
+export class ExperienceCompanyComponent {
+  employerLogo = input.required<string>();
+  clientLogo = input<string>();
+  color = input<'primary' | 'secondary' | 'tertiary'>('primary');
+  width = input(300);
+  height = input(300);
 }

@@ -10,6 +10,7 @@ import {
   DestroyRef,
   OnInit,
   inject,
+  signal,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import {
@@ -42,7 +43,7 @@ import { PROJECTS } from './projects.constant';
 export class ExperiencesComponent implements OnInit {
   projects: readonly Project[] = PROJECTS;
   selectedExperience: Project = PROJECTS[0];
-  hoveredExperienceId?: number;
+  hoveredExperienceId = signal(-1);
 
   private _isMobile = false;
   private _destroyRef = inject(DestroyRef);

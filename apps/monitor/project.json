@@ -14,7 +14,7 @@
         "outputPath": "dist/apps/monitor",
         "index": "apps/monitor/src/index.html",
         "main": "apps/monitor/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/monitor/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

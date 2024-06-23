@@ -14,7 +14,7 @@
         "outputPath": "dist/apps/mobile",
         "index": "apps/mobile/src/index.html",
         "main": "apps/mobile/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/mobile/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

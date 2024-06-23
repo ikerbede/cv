@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="toolbar">
-  @if (displayMenu) {
+  @if (displayMenu()) {
   <button mat-icon-button (click)="openSidenav()">
     <mat-icon svgIcon="menu"></mat-icon>
   </button>

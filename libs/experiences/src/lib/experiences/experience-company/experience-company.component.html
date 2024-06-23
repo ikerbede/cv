@@ -1,13 +1,13 @@
-<div class="experience-company" [ngClass]="color">
+<div class="experience-company" [ngClass]="color()">
   <div
     class="experience-company-employer"
-    [class.employer-not-alone]="!!clientLogo"
+    [class.employer-not-alone]="!!clientLogo()"
   >
-    <img [src]="employerLogo" [width]="(width * 2) / 3" />
+    <img [src]="employerLogo()" [width]="(width() * 2) / 3" />
   </div>
-  @if (clientLogo) {
+  @if (clientLogo()) {
   <div class="experience-company-client">
-    <img [src]="clientLogo" [width]="(width * 2) / 3" />
+    <img [src]="clientLogo()" [width]="(width() * 2) / 3" />
   </div>
   }
 </div>

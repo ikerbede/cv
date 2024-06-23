@@ -2,22 +2,21 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
   OnInit,
+  input,
 } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatDialogModule } from '@angular/material/dialog';
 import {
+  Observable,
   distinctUntilChanged,
   fromEvent,
   map,
-  Observable,
   startWith,
 } from 'rxjs';
-import { Project } from '../../shared/models/project.model';
 import { ExperienceCompanyComponent } from '../experience-company/experience-company.component';
 import { ExperienceDetailsComponent } from '../experience-details/experience-details.component';
-import { ExperienceMainComponent } from '../experience-main/experience-main.component';
+import { Project } from '../project.model';
 
 @Component({
   standalone: true,
@@ -26,7 +25,6 @@ import { ExperienceMainComponent } from '../experience-main/experience-main.comp
     MatDialogModule,
     ExperienceCompanyComponent,
     ExperienceDetailsComponent,
-    ExperienceMainComponent,
   ],
   selector: 'cv-experience-mobile',
   templateUrl: './experience-mobile.component.html',
@@ -34,7 +32,7 @@ import { ExperienceMainComponent } from '../experience-main/experience-main.comp
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ExperienceMobileComponent implements OnInit {
-  @Input() project!: Project;
+  project = input.required<Project>();
 
   width$!: Observable<number>;
 
@@ -50,7 +48,7 @@ export class ExperienceMobileComponent implements OnInit {
 
   displayDetails(): void {
     this.bottomSheet.open(ExperienceDetailsComponent, {
-      data: { project: this.project },
+      data: { project: this.project() },
       panelClass: 'cv-bottom-sheet',
     });
   }

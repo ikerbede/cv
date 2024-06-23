@@ -4,13 +4,15 @@
     <div
       class="experiences-item-content"
       (click)="selectExperience(project)"
-      (mouseenter)="hoveredExperienceId = project.id"
-      (mouseleave)="hoveredExperienceId = undefined"
+      (mouseenter)="hoveredExperienceId.set(project.id)"
+      (mouseleave)="hoveredExperienceId.set(-1)"
     >
       <cv-experience-company
         [employerLogo]="project.employer.logo"
         [clientLogo]="project.client?.logo"
-        [color]="hoveredExperienceId === project.id ? 'tertiary' : 'secondary'"
+        [color]="
+          hoveredExperienceId() === project.id ? 'tertiary' : 'secondary'
+        "
         [height]="100"
         [width]="100"
       ></cv-experience-company>
@@ -26,7 +28,7 @@
         </div>
       </section>
     </div>
-    @if (isLast) {
+    @if (!isLast) {
     <mat-divider></mat-divider>
     }
   </li>
