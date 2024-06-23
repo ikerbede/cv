@@ -1,0 +1,27 @@
+export const CV_ICONS: readonly string[] = [
+  'angular',
+  'article',
+  'business',
+  'check',
+  'code',
+  'contact_page',
+  'date_range',
+  'download',
+  'email',
+  'expand_more',
+  'favorite',
+  'insights',
+  'language',
+  'location_searching',
+  'menu',
+  'more_vert',
+  'my_location',
+  'person',
+  'phone',
+  'place',
+  'school',
+  'search',
+  'work',
+];
+
+export const CV_LOGOS: readonly string[] = ['github', 'linkedin', 'medium'];

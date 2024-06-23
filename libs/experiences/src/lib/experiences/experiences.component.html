@@ -1,0 +1,32 @@
+<ul class="experiences">
+  <li class="experiences-item" *ngFor="let project of projects; last as isLast">
+    <div
+      class="experiences-item-content"
+      (click)="selectExperience(project)"
+      (mouseenter)="hoveredExperienceId = project.id"
+      (mouseleave)="hoveredExperienceId = undefined"
+    >
+      <cv-experience-company
+        [employerLogo]="project.employer.logo"
+        [clientLogo]="project.client?.logo"
+        [color]="hoveredExperienceId === project.id ? 'tertiary' : 'secondary'"
+        [height]="100"
+        [width]="100"
+      ></cv-experience-company>
+      <section class="experiences-item-content-infos">
+        <h3 class="experiences-item-content-infos-title">{{ project.role }}</h3>
+        <div class="cv-icon-label">
+          <mat-icon svgIcon="date_range"></mat-icon>
+          <span>{{ project.period }}</span>
+        </div>
+        <div class="cv-icon-label">
+          <mat-icon svgIcon="place"></mat-icon>
+          <span>{{ project.place }}</span>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="!isLast">
+      <mat-divider></mat-divider>
+    </div>
+  </li>
+</ul>

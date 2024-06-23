@@ -1,0 +1,19 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    [mode]="'over'"
+    [fixedInViewport]="false"
+    [opened]="false"
+    #sidenav
+  >
+    <cv-navigation (navigate)="sidenav.close()"></cv-navigation>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <cv-toolbar
+      [displayMenu]="true"
+      (menuBtnClicked)="sidenav.toggle()"
+    ></cv-toolbar>
+    <div class="sidenav-content-main">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

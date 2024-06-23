@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@cv/shared-styles/variables/dimensions';
+@use '@cv/shared-styles/variables/main';
+@use '@cv/shared-styles/mixins' as mixins;
+@use '@cv/shared-styles/variables/colors' as colors;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: colors.$cv-color-brun-800;
+  font-family: Roboto, sans-serif;
+  font-size: var(--cv-font-size);
+  line-height: var(--cv-line-height);
+}
+
+* {
+  @include mixins.border-box;
+}
+
+button.mat-fab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mat-icon {
+    width: var(--cv-dim-xl);
+    height: var(--cv-dim-xl);
+  }
+}
+
+.mat-mdc-nav-list {
+  --mdc-list-list-item-leading-icon-color: var(--cv-text-color-primary);
+}
+
+.mat-mdc-nav-list
+  .mdc-list-item:focus.mdc-list-item:hover
+  .mdc-list-item__primary-text {
+  --mdc-list-list-item-focus-label-text-color: var(--cv-color-secondary);
+}
+
+.mat-mdc-nav-list {
+  --mdc-list-list-item-hover-leading-icon-color: var(--cv-color-secondary);
+  --mdc-list-list-item-hover-label-text-color: var(--cv-color-secondary);
+}
+
+.mat-divider {
+  --mat-divider-color: var(--cv-text-color-primary);
+}
+
+.cv-menu {
+  background-color: colors.$cv-color-green-50;
+
+  .mat-mdc-menu-item .mat-icon,
+  .mat-mdc-menu-item .mdc-list-item__primary-text {
+    color: var(--cv-color-primary);
+  }
+}
+
+.cv-dialog > .mat-mdc-dialog-container {
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.cv-bottom-sheet > .mat-bottom-sheet-container {
+  padding: 0;
+}
+
+.cv-icon-label {
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.cv-divider-container {
+  padding: var(--cv-dim-xs) var(--cv-dim-m);
+}

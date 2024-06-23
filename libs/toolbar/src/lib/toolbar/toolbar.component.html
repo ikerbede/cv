@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="toolbar">
+  <button mat-icon-button *ngIf="displayMenu" (click)="openSidenav()">
+    <mat-icon svgIcon="menu"></mat-icon>
+  </button>
+  <span>IKER BEDECARRAX</span>
+  <a
+    href="assets/cv_iker_bedecarrax.pdf"
+    download
+    mat-icon-button
+    matTooltip="Download PDF"
+  >
+    <mat-icon svgIcon="download"></mat-icon>
+  </a>
+</mat-toolbar>

@@ -41,15 +41,63 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx/angular:webpack-browser": {
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "env": "NX_MF_DEV_SERVER_STATIC_REMOTES"
+        }
+      ]
+    },
+    "@nx/angular:ng-packagr-lite": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {
+    "@nx/angular:host": {
+      "standalone": true,
+      "tags": "type:app",
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "none",
+      "directory": "apps/"
+    },
+    "@nx/angular:remote": {
+      "standalone": true,
+      "tags": "type:app",
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "none",
+      "directory": "apps/"
+    },
     "@nx/angular:application": {
       "e2eTestRunner": "none",
       "linter": "eslint",
       "style": "scss",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "standalone": true,
+      "tags": "type:app",
+      "directory": "apps/"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "standalone": true,
+      "buildable": true,
+      "style": "scss",
+      "directory": "libs/",
+      "prefix": "cv"
+    },
+    "@nx/angular:component": {
+      "style": "scss",
+      "standalone": true
     }
   },
-  "defaultProject": "cv"
+  "defaultProject": "host"
 }

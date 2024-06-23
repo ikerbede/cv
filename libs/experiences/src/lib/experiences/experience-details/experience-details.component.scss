@@ -1,0 +1,105 @@
+@use '@cv/shared-styles/variables/colors' as colors;
+
+$componentId: 'experience-details';
+
+.#{$componentId} {
+  &-header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    &-employer,
+    &-client {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-employer {
+      height: 200px;
+      background: linear-gradient(
+        colors.$cv-color-green-600,
+        colors.$cv-color-green-400 50%,
+        colors.$cv-color-green-200 80%,
+        colors.$cv-color-green-50
+      );
+    }
+
+    &-employer.employer-not-alone {
+      height: 80px;
+      background: linear-gradient(
+        colors.$cv-color-green-600,
+        colors.$cv-color-green-400
+      );
+    }
+
+    &-client {
+      height: 120px;
+      background: linear-gradient(
+        colors.$cv-color-green-400,
+        colors.$cv-color-green-300 50%,
+        colors.$cv-color-green-200,
+        colors.$cv-color-green-50
+      );
+    }
+  }
+
+  &-content {
+    padding: var(--cv-dim-s) var(--cv-dim-xl);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-role {
+      margin: 0;
+    }
+
+    &-techs {
+      margin: var(--cv-dim-s) 0;
+
+      &-chip {
+        background-color: var(--cv-color-secondary) !important;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-divider {
+    padding: var(--cv-dim-sm) var(--cv-dim-xl);
+
+    mat-divider {
+      border-color: var(--cv-color-primary);
+    }
+  }
+
+  &-footer {
+    padding: var(--cv-dim-sm) var(--cv-dim-xl);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4 {
+      margin: 0;
+    }
+
+    &-facts {
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &-content,
+  &-divider,
+  &-footer {
+    color: var(--cv-color-primary);
+    background-color: colors.$cv-color-green-50;
+  }
+}

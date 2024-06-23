@@ -1,0 +1,95 @@
+@use '@angular/material' as mat;
+@use '@cv/shared-styles/variables/colors' as colors;
+
+@include mat.core();
+
+$brun-palette: (
+  50: colors.$cv-color-brun-50,
+  100: colors.$cv-color-brun-100,
+  200: colors.$cv-color-brun-200,
+  300: colors.$cv-color-brun-300,
+  400: colors.$cv-color-brun-400,
+  500: colors.$cv-color-brun-500,
+  600: colors.$cv-color-brun-600,
+  700: colors.$cv-color-brun-700,
+  800: colors.$cv-color-brun-800,
+  900: colors.$cv-color-brun-900,
+  contrast: (
+    50: colors.$cv-color-brun-500,
+    100: colors.$cv-color-brun-500,
+    200: colors.$cv-color-brun-500,
+    300: colors.$cv-color-beige,
+    400: colors.$cv-color-beige,
+    500: colors.$cv-color-beige,
+    600: colors.$cv-color-beige,
+    700: colors.$cv-color-beige,
+    800: colors.$cv-color-beige,
+    900: colors.$cv-color-beige,
+  ),
+);
+
+$green-palette: (
+  50: colors.$cv-color-green-50,
+  100: colors.$cv-color-green-100,
+  200: colors.$cv-color-green-200,
+  300: colors.$cv-color-green-300,
+  400: colors.$cv-color-green-400,
+  500: colors.$cv-color-green-500,
+  600: colors.$cv-color-green-600,
+  700: colors.$cv-color-green-700,
+  800: colors.$cv-color-green-800,
+  900: colors.$cv-color-green-900,
+  contrast: (
+    50: colors.$cv-color-brun-500,
+    100: colors.$cv-color-brun-500,
+    200: colors.$cv-color-brun-500,
+    300: colors.$cv-color-brun-500,
+    400: colors.$cv-color-brun-500,
+    500: colors.$cv-color-brun-500,
+    600: colors.$cv-color-brun-500,
+    700: colors.$cv-color-brun-500,
+    800: colors.$cv-color-brun-500,
+    900: colors.$cv-color-brun-500,
+  ),
+);
+
+$violet-palette: (
+  50: colors.$cv-color-violet-50,
+  100: colors.$cv-color-violet-100,
+  200: colors.$cv-color-violet-200,
+  300: colors.$cv-color-violet-300,
+  400: colors.$cv-color-violet-400,
+  500: colors.$cv-color-violet-500,
+  600: colors.$cv-color-violet-600,
+  700: colors.$cv-color-violet-700,
+  800: colors.$cv-color-violet-800,
+  900: colors.$cv-color-violet-900,
+  contrast: (
+    50: colors.$cv-color-brun-500,
+    100: colors.$cv-color-brun-500,
+    200: colors.$cv-color-brun-500,
+    300: colors.$cv-color-brun-500,
+    400: colors.$cv-color-brun-500,
+    500: colors.$cv-color-brun-500,
+    600: colors.$cv-color-brun-500,
+    700: colors.$cv-color-brun-500,
+    800: colors.$cv-color-brun-500,
+    900: colors.$cv-color-brun-500,
+  ),
+);
+
+$cv-primary: mat.m2-define-palette($brun-palette, 900);
+$cv-accent: mat.m2-define-palette($green-palette, 800);
+$cv-warn: mat.m2-define-palette($violet-palette, 600);
+
+$cv-theme: mat.m2-define-dark-theme(
+  (
+    color: (
+      primary: $cv-primary,
+      accent: $cv-accent,
+      warn: $cv-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($cv-theme);

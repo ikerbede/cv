@@ -1,0 +1,10 @@
+:root {
+  --cv-dim-xxs: 4px;
+  --cv-dim-xs: 8px;
+  --cv-dim-s: 16px;
+  --cv-dim-sm: 20px;
+  --cv-dim-m: 24px;
+  --cv-dim-l: 32px;
+  --cv-dim-xl: 40px;
+  --cv-dim-xxl: 60px;
+}

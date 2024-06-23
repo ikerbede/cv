@@ -1,0 +1,44 @@
+<mat-nav-list role="list" class="navigation-navlist">
+  <div mat-subheader>Navigation</div>
+  <a
+    mat-list-item
+    role="listitem"
+    class="navigation-navlist-item"
+    *ngFor="let route of routes"
+    [routerLink]="route.path"
+    (click)="onNavigate(route.path)"
+  >
+    <mat-icon matListItemIcon [svgIcon]="route.icon"></mat-icon>
+    <div matListItemTitle>{{ route.name }}</div>
+  </a>
+  <div class="cv-divider-container"><mat-divider></mat-divider></div>
+
+  <div mat-subheader>Production</div>
+  <a href="https://github.com/ikerbede" target="_blank" mat-list-item>
+    <mat-icon matListItemIcon svgIcon="github"></mat-icon>
+    <div matListItemTitle>Github</div>
+  </a>
+  <a href="https://medium.com/@iker.bedecarrax" target="_blank" mat-list-item>
+    <mat-icon matListItemIcon svgIcon="medium"></mat-icon>
+    <div matListItemTitle>Medium</div>
+  </a>
+  <div class="cv-divider-container"><mat-divider></mat-divider></div>
+
+  <div mat-subheader>Contact</div>
+  <a href="tel:+33 7 81 85 30 03" target="_blank" mat-list-item>
+    <mat-icon matListItemIcon svgIcon="phone"></mat-icon>
+    <div matListItemTitle>Phone</div>
+  </a>
+  <a href="mailto:iker.bedecarrax@gmail.com" target="_blank" mat-list-item>
+    <mat-icon matListItemIcon svgIcon="email"></mat-icon>
+    <div matListItemTitle>Mail</div>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/iker-b%C3%A9d%C3%A9carrax-686161131/"
+    target="_blank"
+    mat-list-item
+  >
+    <mat-icon matListItemIcon svgIcon="linkedin"></mat-icon>
+    <div matListItemTitle>LinkedIn</div>
+  </a>
+</mat-nav-list>

@@ -1,0 +1,43 @@
+.experience-company {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  border-radius: var(--cv-dim-xs);
+  overflow: hidden;
+
+  &-employer,
+  &-client {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-employer {
+    height: 100%;
+  }
+
+  &-employer.employer-not-alone {
+    height: 40%;
+  }
+
+  &-client {
+    height: 60%;
+  }
+}
+
+.primary {
+  background-color: var(--cv-text-color-primary);
+}
+
+.secondary {
+  background-color: var(--cv-color-secondary);
+}
+
+.tertiary {
+  background-color: var(--cv-color-tertiary);
+}

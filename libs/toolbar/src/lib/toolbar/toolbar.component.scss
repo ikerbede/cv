@@ -1,0 +1,20 @@
+.toolbar {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--cv-color-primary);
+  border-bottom: 1px solid var(--cv-text-color-primary);
+
+  &-nav-tab {
+    font-size: var(--cv-dim-s);
+  }
+
+  &-actions {
+    display: flex;
+  }
+
+  mat-icon {
+    color: var(--cv-text-color-primary);
+  }
+}

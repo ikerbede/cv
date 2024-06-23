@@ -1,0 +1,6 @@
+:root {
+  --cv-font-size-s: var(--cv-dim-xs);
+  --cv-font-size: var(--cv-dim-s);
+  --cv-font-size-l: var(--cv-dim-m);
+  --cv-line-height: var(--cv-dim-m);
+}

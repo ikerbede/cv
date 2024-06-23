@@ -1,0 +1,38 @@
+@use '@cv/shared-styles/breakpoints' as breakpoints;
+@use '@cv/shared-styles/variables/colors' as colors;
+
+.experiences {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-item {
+    &-content {
+      height: 132px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &-infos {
+        margin-left: var(--cv-dim-m);
+        color: var(--cv-text-color-primary);
+
+        &-title {
+          margin-top: 0;
+        }
+
+        @media (max-width: breakpoints.$cv-breakpoint-s-max-width) {
+          font-size: x-small;
+
+          &-title {
+            font-size: small;
+          }
+        }
+      }
+    }
+
+    &-content:hover &-content-infos {
+      color: var(--cv-color-tertiary);
+    }
+  }
+}

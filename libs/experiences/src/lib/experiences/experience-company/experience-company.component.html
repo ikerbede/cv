@@ -1,0 +1,11 @@
+<div class="experience-company" [ngClass]="color">
+  <div
+    class="experience-company-employer"
+    [class.employer-not-alone]="!!clientLogo"
+  >
+    <img [src]="employerLogo" [width]="(width * 2) / 3" />
+  </div>
+  <div class="experience-company-client" *ngIf="clientLogo">
+    <img [src]="clientLogo" [width]="(width * 2) / 3" />
+  </div>
+</div>

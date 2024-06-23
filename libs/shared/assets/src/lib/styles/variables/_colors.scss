@@ -1,0 +1,48 @@
+$cv-color-brun-50: #e5e5e5;
+$cv-color-brun-100: #bebdbe;
+$cv-color-brun-200: #939192;
+$cv-color-brun-300: #686566;
+$cv-color-brun-400: #474446;
+$cv-color-brun-500: #272325;
+$cv-color-brun-600: #231f21;
+$cv-color-brun-700: #1d1a1b;
+$cv-color-brun-800: #171516;
+$cv-color-brun-900: #0e0c0d;
+
+$cv-color-beige: #fff6e6;
+
+$cv-color-green-50: #eafdf9;
+$cv-color-green-100: #cbfbef;
+$cv-color-green-200: #a8f9e5;
+$cv-color-green-300: #85f6da;
+$cv-color-green-400: #6bf4d2;
+$cv-color-green-500: #51f2ca;
+$cv-color-green-600: #4af0c5;
+$cv-color-green-700: #40eebd;
+$cv-color-green-800: #37ecb7;
+$cv-color-green-900: #27e8ab;
+
+$cv-color-violet-50: #f6f2fd;
+$cv-color-violet-100: #eae0fa;
+$cv-color-violet-200: #dccbf7;
+$cv-color-violet-300: #cdb6f4;
+$cv-color-violet-400: #c3a6f1;
+$cv-color-violet-500: #b896ef;
+$cv-color-violet-600: #b18eed;
+$cv-color-violet-700: #a883eb;
+$cv-color-violet-800: #a079e8;
+$cv-color-violet-900: #9168e4;
+
+$cv-color-primary: $cv-color-brun-500;
+$cv-color-secondary: $cv-color-green-500;
+$v-color-tertiary: $cv-color-violet-500;
+
+$cv-text-color-primary: $cv-color-beige;
+
+:root {
+  --cv-color-primary: #272325;
+  --cv-color-secondary: #51f2ca;
+  --cv-color-tertiary: #b896ef;
+
+  --cv-text-color-primary: #fff6e6;
+}
