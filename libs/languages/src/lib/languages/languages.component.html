@@ -1,9 +1,6 @@
 <ul class="languages">
-  <li
-    class="languages-item"
-    [class.languages-item-even]="isEven"
-    *ngFor="let language of languages; even as isEven"
-  >
+  @for (language of languages; track language.name; let isEven = $even) {
+  <li class="languages-item" [class.languages-item-even]="isEven">
     <span class="languages-item-progress-value">{{ language.value }}%</span>
     <mat-progress-spinner
       class="languages-item-spinner"
@@ -15,4 +12,5 @@
     </mat-progress-spinner>
     <strong class="languages-item-name">{{ language.name }}</strong>
   </li>
+  }
 </ul>

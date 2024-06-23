@@ -5,7 +5,9 @@
   >
     <img [src]="employerLogo" [width]="(width * 2) / 3" />
   </div>
-  <div class="experience-company-client" *ngIf="clientLogo">
+  @if (clientLogo) {
+  <div class="experience-company-client">
     <img [src]="clientLogo" [width]="(width * 2) / 3" />
   </div>
+  }
 </div>

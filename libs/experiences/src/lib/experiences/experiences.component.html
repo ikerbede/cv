@@ -1,5 +1,6 @@
 <ul class="experiences">
-  <li class="experiences-item" *ngFor="let project of projects; last as isLast">
+  @for (project of projects; track project.id; let isLast = $last) {
+  <li class="experiences-item">
     <div
       class="experiences-item-content"
       (click)="selectExperience(project)"
@@ -25,8 +26,9 @@
         </div>
       </section>
     </div>
-    <div *ngIf="!isLast">
-      <mat-divider></mat-divider>
-    </div>
+    @if (isLast) {
+    <mat-divider></mat-divider>
+    }
   </li>
+  }
 </ul>

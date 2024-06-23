@@ -1,5 +1,6 @@
 <ul class="education-courses">
-  <li class="education-course" *ngFor="let course of courses">
+  @for (course of courses; track course.label) {
+  <li class="education-course">
     <a [href]="course.school.link" target="_blank">
       <img
         [src]="course.school.logo"
@@ -14,4 +15,5 @@
       <span class="secondary-text-on-white">{{ course.period }}</span>
     </div>
   </li>
+  }
 </ul>

@@ -1,16 +1,17 @@
 <mat-nav-list role="list" class="navigation-navlist">
   <div mat-subheader>Navigation</div>
+  @for (route of routes; track route.path) {
   <a
     mat-list-item
     role="listitem"
     class="navigation-navlist-item"
-    *ngFor="let route of routes"
     [routerLink]="route.path"
     (click)="onNavigate(route.path)"
   >
     <mat-icon matListItemIcon [svgIcon]="route.icon"></mat-icon>
     <div matListItemTitle>{{ route.name }}</div>
   </a>
+  }
   <div class="cv-divider-container"><mat-divider></mat-divider></div>
 
   <div mat-subheader>Production</div>

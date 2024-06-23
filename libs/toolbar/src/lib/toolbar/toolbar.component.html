@@ -1,7 +1,9 @@
 <mat-toolbar color="primary" class="toolbar">
-  <button mat-icon-button *ngIf="displayMenu" (click)="openSidenav()">
+  @if (displayMenu) {
+  <button mat-icon-button (click)="openSidenav()">
     <mat-icon svgIcon="menu"></mat-icon>
   </button>
+  }
   <span>IKER BEDECARRAX</span>
   <a
     href="assets/cv_iker_bedecarrax.pdf"

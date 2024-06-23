@@ -1,12 +1,9 @@
 <ul class="publications">
-  <li *ngFor="let publication of publications">
+  @for (publication of publications; track publication.url) {
+  <li>
     <a class="publications-item" target="_blank" [href]="publication.url">
       <div class="publications-item-image-container">
-        <img
-          class="publications-item-image"
-          [src]="publication.imageUrl"
-          *ngIf="publication.imageUrl"
-        />
+        <img class="publications-item-image" [src]="publication.imageUrl" />
       </div>
       <section class="publications-item-content">
         <h3>{{ publication.title }}</h3>
@@ -16,4 +13,5 @@
       </section>
     </a>
   </li>
+  }
 </ul>

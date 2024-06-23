@@ -8,14 +8,15 @@
     >
       <img [src]="experience.employer.logo" width="200px" />
     </a>
+    @if (experience.client) {
     <a
       [href]="experience.employer.link"
       target="_blank"
       class="experience-details-header-client"
-      *ngIf="experience.client"
     >
       <img [src]="experience.client.logo" width="200px" />
     </a>
+    }
     <div
       class="experience-details-header-gradient"
       [class.gradient-client]="!!experience.client"
@@ -26,13 +27,11 @@
       <strong>{{ experience.role }}</strong>
     </p>
     <mat-chip-set class="experience-details-content-techs">
-      <mat-chip
-        class="experience-details-content-techs-chip"
-        color="accent"
-        *ngFor="let tech of experience.techs"
-      >
+      @for (tech of experience.techs; track tech) {
+      <mat-chip class="experience-details-content-techs-chip" color="accent">
         {{ tech }}
       </mat-chip>
+      }
     </mat-chip-set>
     <div class="experience-details-content-footer">
       <div class="cv-icon-label">
@@ -53,10 +52,12 @@
     <p>{{ experience.description }}</p>
     <h4>Acquired skills</h4>
     <ul class="experience-details-footer-facts">
-      <li class="cv-icon-label" *ngFor="let fact of experience.relevantFacts">
+      @for (fact of experience.relevantFacts; track experience.id) {
+      <li class="cv-icon-label">
         <mat-icon svgIcon="check"></mat-icon>
         <span>{{ fact }}</span>
       </li>
+      }
     </ul>
   </div>
 </article>
