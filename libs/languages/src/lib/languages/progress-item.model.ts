@@ -1,4 +1,4 @@
-export interface ProgressItem {
+export type ProgressItem = {
   name: string;
   value: number;
-}
+};

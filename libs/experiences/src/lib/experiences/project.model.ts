@@ -1,10 +1,10 @@
-export interface Company {
+export type Company = {
   name: string;
   logo: string;
   link: string;
-}
+};
 
-export interface Project {
+export type Project = {
   id: number;
   icon?: string;
   client?: Company;
@@ -15,4 +15,4 @@ export interface Project {
   period: string;
   role: string;
   techs: string[];
-}
+};

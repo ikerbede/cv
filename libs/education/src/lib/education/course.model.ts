@@ -1,11 +1,11 @@
-export interface School {
+export type School = {
   label: string;
   logo: string;
   link: string;
-}
+};
 
-export interface Course {
+export type Course = {
   school: School;
   label: string;
   period: string;
-}
+};
