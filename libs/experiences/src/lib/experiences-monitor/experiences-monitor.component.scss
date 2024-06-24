@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  gap: var(--cv-dim-m);
+
+  mat-divider {
+    margin-right: calc(var(--cv-dim-m) * -1);
+  }
+}

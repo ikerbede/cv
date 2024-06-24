@@ -1,33 +1,34 @@
+@if (experience(); as project) {
 <article class="experience-details">
   <header class="experience-details-header">
     <a
-      [href]="experience().employer.link"
+      [href]="project.employer.link"
       target="_blank"
       class="experience-details-header-employer"
-      [class.employer-not-alone]="!!experience().client"
+      [class.employer-not-alone]="!!project.client"
     >
-      <img [src]="experience().employer.logo" width="200px" />
+      <img [src]="project.employer.logo" width="200px" />
     </a>
-    @if (experience().client) {
+    @if (!!project.client) {
     <a
-      [href]="experience().client!.link"
+      [href]="project.client!.link"
       target="_blank"
       class="experience-details-header-client"
     >
-      <img [src]="experience().client!.logo" width="200px" />
+      <img [src]="project.client!.logo" width="200px" />
     </a>
     }
     <div
       class="experience-details-header-gradient"
-      [class.gradient-client]="!!experience().client"
+      [class.gradient-client]="!!project.client"
     ></div>
   </header>
   <section class="experience-details-content">
     <p class="experience-details-content-role">
-      <strong>{{ experience().role }}</strong>
+      <strong>{{ project.role }}</strong>
     </p>
     <mat-chip-set class="experience-details-content-techs">
-      @for (tech of experience().techs; track tech) {
+      @for (tech of project.techs; track tech) {
       <mat-chip class="experience-details-content-techs-chip" color="accent">
         {{ tech }}
       </mat-chip>
@@ -36,11 +37,11 @@
     <div class="experience-details-content-footer">
       <div class="cv-icon-label">
         <mat-icon [svgIcon]="'place'"></mat-icon>
-        <span>{{ experience().place }}</span>
+        <span>{{ project.place }}</span>
       </div>
       <div class="cv-icon-label">
         <mat-icon [svgIcon]="'date_range'"></mat-icon>
-        <span>{{ experience().period }}</span>
+        <span>{{ project.period }}</span>
       </div>
     </div>
   </section>
@@ -49,10 +50,10 @@
   </div>
   <div class="experience-details-footer">
     <h4>Description</h4>
-    <p>{{ experience().description }}</p>
+    <p>{{ project.description }}</p>
     <h4>Acquired skills</h4>
     <ul class="experience-details-footer-facts">
-      @for (fact of experience().relevantFacts; track fact) {
+      @for (fact of project.relevantFacts; track fact) {
       <li class="cv-icon-label">
         <mat-icon svgIcon="check"></mat-icon>
         <span>{{ fact }}</span>
@@ -61,3 +62,4 @@
     </ul>
   </div>
 </article>
+}

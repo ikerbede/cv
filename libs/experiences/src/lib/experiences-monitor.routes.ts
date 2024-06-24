@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
 import { ExperienceDetailsComponent } from './experience-details/experience-details.component';
-import { ExperiencesComponent } from './experiences.component';
+import { ExperiencesMonitorComponent } from './experiences-monitor/experiences-monitor.component';
 
-export const EXPERIENCES_ROUTES: Routes = [
+export const EXPERIENCES_MONITOR_ROUTES: Routes = [
   {
     path: '',
-    component: ExperiencesComponent,
+    component: ExperiencesMonitorComponent,
     children: [
       {
-        path: ':id',
+        path: ':experienceId',
         component: ExperienceDetailsComponent,
       },
     ],

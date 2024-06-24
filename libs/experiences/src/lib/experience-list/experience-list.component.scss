@@ -2,9 +2,14 @@
 @use '@cv/shared-styles/variables/colors' as colors;
 
 .experiences {
+  width: 400px;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (max-width: breakpoints.$cv-breakpoint-s-max-width) {
+    width: 312px;
+  }
 
   &-item {
     &-content {

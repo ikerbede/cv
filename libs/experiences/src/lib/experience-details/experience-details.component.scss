@@ -2,6 +2,10 @@
 
 $componentId: 'experience-details';
 
+:host {
+  width: 100%;
+}
+
 .#{$componentId} {
   &-header {
     height: 200px;
