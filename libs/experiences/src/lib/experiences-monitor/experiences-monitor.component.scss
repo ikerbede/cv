@@ -1,8 +1,16 @@
 :host {
+  height: 100%;
+
   display: flex;
   gap: var(--cv-dim-m);
+}
 
-  mat-divider {
-    margin-right: calc(var(--cv-dim-m) * -1);
-  }
+.exp-monitor-list {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.exp-monitor-details {
+  width: calc(100% - 464px);
 }

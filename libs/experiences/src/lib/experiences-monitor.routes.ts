@@ -11,6 +11,7 @@ export const EXPERIENCES_MONITOR_ROUTES: Routes = [
         path: ':experienceId',
         component: ExperienceDetailsComponent,
       },
+      { path: '', redirectTo: '7', pathMatch: 'full' },
     ],
   },
 ];
