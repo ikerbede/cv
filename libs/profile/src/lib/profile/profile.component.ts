@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -6,7 +6,13 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatChipsModule, MatIconModule],
+  imports: [
+    CommonModule,
+    NgOptimizedImage,
+    MatButtonModule,
+    MatChipsModule,
+    MatIconModule,
+  ],
   selector: 'cv-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
