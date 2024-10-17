@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { CvRoute } from '@cv/navigation';
 import { ExperienceListComponent } from '../experience-list/experience-list.component';
 
 @Component({
@@ -17,4 +18,10 @@ import { ExperienceListComponent } from '../experience-list/experience-list.comp
   styleUrl: './experiences-monitor.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ExperiencesMonitorComponent {}
+export class ExperiencesMonitorComponent {
+  private readonly _router = inject(Router);
+
+  selectExperience(experienceId: number): void {
+    this._router.navigate([CvRoute.Experiences, experienceId]);
+  }
+}

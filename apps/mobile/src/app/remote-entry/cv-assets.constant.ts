@@ -1,5 +1,6 @@
 export const CV_ICONS: readonly string[] = [
   'angular',
+  'arrow_back',
   'article',
   'business',
   'check',

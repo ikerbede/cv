@@ -2,4 +2,21 @@ $componentId: 'experience-mobile';
 
 :host {
   display: flex;
+  flex-direction: column;
+
+  cv-experience-details {
+    height: calc(100vh - 56px);
+    overflow: auto;
+  }
+}
+
+.toolbar {
+  z-index: 2;
+
+  background-color: var(--cv-color-primary);
+  border-bottom: 1px solid var(--cv-text-color-primary);
+
+  mat-icon {
+    color: var(--cv-text-color-primary);
+  }
 }

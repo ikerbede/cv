@@ -26,7 +26,7 @@ import { PROJECTS } from '../projects.constant';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ExperienceDetailsComponent {
-  experienceId = input.required<string>();
+  experienceId = input.required<string | number>();
   experience = computed(() =>
     PROJECTS.find((project) => project.id === Number(this.experienceId()))
   );

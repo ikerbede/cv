@@ -1,55 +1,42 @@
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  input,
-} from '@angular/core';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
-import { MatDialogModule } from '@angular/material/dialog';
-import {
-  Observable,
-  distinctUntilChanged,
-  fromEvent,
-  map,
-  startWith,
-} from 'rxjs';
-import { ExperienceCompanyComponent } from '../experience-company/experience-company.component';
+  MAT_BOTTOM_SHEET_DATA,
+  MatBottomSheetModule,
+  MatBottomSheetRef,
+} from '@angular/material/bottom-sheet';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterLink } from '@angular/router';
 import { ExperienceDetailsComponent } from '../experience-details/experience-details.component';
-import { Project } from '../project.model';
+import { ExperienceListComponent } from '../experience-list/experience-list.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   standalone: true,
   imports: [
     CommonModule,
-    MatDialogModule,
-    ExperienceCompanyComponent,
+    RouterLink,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
     ExperienceDetailsComponent,
+    ExperienceListComponent,
   ],
   selector: 'cv-experience-mobile',
   templateUrl: './experience-mobile.component.html',
   styleUrls: ['./experience-mobile.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ExperienceMobileComponent implements OnInit {
-  project = input.required<Project>();
+export class ExperienceMobileComponent {
+  private readonly _bottomSheetRef =
+    inject<MatBottomSheetRef<ExperienceMobileComponent>>(MatBottomSheetRef);
+  readonly experienceId = inject<{ experienceId: number }>(
+    MAT_BOTTOM_SHEET_DATA
+  ).experienceId;
 
-  width$!: Observable<number>;
-
-  constructor(private readonly bottomSheet: MatBottomSheet) {}
-
-  ngOnInit(): void {
-    this.width$ = fromEvent(window, 'resize').pipe(
-      startWith(undefined),
-      map(() => Math.round(window.innerWidth * 0.25)),
-      distinctUntilChanged()
-    );
-  }
-
-  displayDetails(): void {
-    this.bottomSheet.open(ExperienceDetailsComponent, {
-      data: { project: this.project() },
-      panelClass: 'cv-bottom-sheet',
-    });
+  goBack(): void {
+    this._bottomSheetRef.dismiss();
   }
 }

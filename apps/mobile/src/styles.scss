@@ -67,6 +67,8 @@ button.mat-fab {
 
 .cv-bottom-sheet > .mat-bottom-sheet-container {
   padding: 0;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .cv-icon-label {

@@ -1,4 +1,7 @@
-<cv-experience-list class="exp-monitor-list"></cv-experience-list>
+<cv-experience-list
+  class="exp-monitor-list"
+  (selected)="selectExperience($event)"
+></cv-experience-list>
 <mat-divider [vertical]="true"></mat-divider>
 <div class="exp-monitor-details">
   <router-outlet></router-outlet>
