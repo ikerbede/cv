@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Course } from './course.model';
-import { COURSES } from './courses.constant';
+import { Course } from '../course.model';
+import { COURSES } from '../courses.constant';
 
 @Component({
   standalone: true,

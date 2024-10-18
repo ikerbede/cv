@@ -2,7 +2,10 @@
 
 :host {
   display: flex;
-  justify-content: center;
+
+  @media (max-width: breakpoints.$cv-breakpoint-s-max-width) {
+    justify-content: center;
+  }
 }
 
 .education {

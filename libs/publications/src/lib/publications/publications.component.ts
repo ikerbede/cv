@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Publication } from './publication.model';
-import { PUBLICATIONS_MEDIUM } from './publications.constant';
+import { Publication } from '../publication.model';
+import { PUBLICATIONS_MEDIUM } from '../publications.constant';
 
 @Component({
   selector: 'cv-publications',
