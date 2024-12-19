@@ -14,7 +14,7 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: ['mobile', 'monitor'],
+  remotes: [['mobile', 'http://localhost:4201'], ['monitor', 'http://localhost:4202']],
 };
 
 export default config;

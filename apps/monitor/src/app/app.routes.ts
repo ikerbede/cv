@@ -31,5 +31,5 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@cv/languages').then((mod) => mod.LanguagesComponent),
   },
-  { path: '', redirectTo: `/${CvRoute.Profile}`, pathMatch: 'full' },
+  { path: '', redirectTo: `${CvRoute.Profile}`, pathMatch: 'full' },
 ];

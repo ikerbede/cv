@@ -21,9 +21,18 @@
           {
             "glob": "**/*",
             "input": "apps/host/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/src/lib",
+            "output": "assets"
           }
         ],
-        "styles": ["apps/host/src/styles.scss"],
+        "styles": [
+          "@cv/shared-styles/cv-theme.scss",
+          "@cv/shared-styles/global.scss",
+          "apps/host/src/styles.scss"
+        ],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/host/webpack.config.ts"

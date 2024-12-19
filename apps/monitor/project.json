@@ -30,6 +30,7 @@
         ],
         "styles": [
           "@cv/shared-styles/cv-theme.scss",
+          "@cv/shared-styles/global.scss",
           "apps/monitor/src/styles.scss"
         ],
         "scripts": [],

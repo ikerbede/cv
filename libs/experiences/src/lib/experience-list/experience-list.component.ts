@@ -9,7 +9,6 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ExperienceCompanyComponent } from '../experience-company/experience-company.component';
-import { ExperienceDetailsComponent } from '../experience-details/experience-details.component';
 import { Project } from '../project.model';
 import { PROJECTS } from '../projects.constant';
 
@@ -22,7 +21,6 @@ import { PROJECTS } from '../projects.constant';
     MatIconModule,
     MatListModule,
     ExperienceCompanyComponent,
-    ExperienceDetailsComponent,
   ],
   templateUrl: './experience-list.component.html',
   styleUrl: './experience-list.component.scss',
