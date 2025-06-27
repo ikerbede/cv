@@ -33,18 +33,18 @@ button.mat-fab {
 }
 
 .mat-mdc-nav-list {
-  --mdc-list-list-item-leading-icon-color: var(--cv-text-color-primary);
+  --mat-list-list-item-leading-icon-color: var(--cv-text-color-primary);
 }
 
 .mat-mdc-nav-list
   .mdc-list-item:focus.mdc-list-item:hover
   .mdc-list-item__primary-text {
-  --mdc-list-list-item-focus-label-text-color: var(--cv-color-secondary);
+  --mat-list-list-item-focus-label-text-color: var(--cv-color-secondary);
 }
 
 .mat-mdc-nav-list {
-  --mdc-list-list-item-hover-leading-icon-color: var(--cv-color-secondary);
-  --mdc-list-list-item-hover-label-text-color: var(--cv-color-secondary);
+  --mat-list-list-item-hover-leading-icon-color: var(--cv-color-secondary);
+  --mat-list-list-item-hover-label-text-color: var(--cv-color-secondary);
 }
 
 .mat-divider {

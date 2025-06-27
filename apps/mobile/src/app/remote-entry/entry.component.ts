@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
@@ -9,12 +9,11 @@ import { CV_ICONS, CV_LOGOS } from './cv-assets.constant';
 
 @Component({
     imports: [
-        CommonModule,
-        RouterModule,
-        MatSidenavModule,
-        NavigationComponent,
-        ToolbarComponent,
-    ],
+    RouterModule,
+    MatSidenavModule,
+    NavigationComponent,
+    ToolbarComponent
+],
     selector: 'app-mobile-entry',
     templateUrl: './entry.component.html',
     styleUrl: './entry.component.scss'

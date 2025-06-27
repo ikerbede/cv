@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProgressItem } from './progress-item.model';
 
 @Component({
     selector: 'cv-languages',
-    imports: [CommonModule, MatProgressSpinnerModule],
+    imports: [MatProgressSpinnerModule],
     templateUrl: './languages.component.html',
     styleUrls: ['./languages.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,12 +9,11 @@ import { CvRoute } from '../cv-route.enum';
 @Component({
     selector: 'cv-navigation',
     imports: [
-        CommonModule,
-        RouterModule,
-        MatDividerModule,
-        MatIconModule,
-        MatListModule,
-    ],
+    RouterModule,
+    MatDividerModule,
+    MatIconModule,
+    MatListModule
+],
     templateUrl: './navigation.component.html',
     styleUrl: './navigation.component.scss'
 })

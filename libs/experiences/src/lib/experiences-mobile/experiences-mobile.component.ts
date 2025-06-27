@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import {
   ChangeDetectionStrategy,
   Component,
@@ -14,7 +14,7 @@ import { ExperienceListComponent } from '../experience-list/experience-list.comp
 import { ExperienceMobileComponent } from '../experience-mobile/experience-mobile.component';
 
 @Component({
-    imports: [CommonModule, MatBottomSheetModule, ExperienceListComponent],
+    imports: [MatBottomSheetModule, ExperienceListComponent],
     selector: 'cv-experiences-mobile',
     templateUrl: './experiences-mobile.component.html',
     styleUrls: ['./experiences-mobile.component.scss'],

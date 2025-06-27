@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import {
   ChangeDetectionStrategy,
   Component,
@@ -15,12 +15,11 @@ import { PROJECTS } from '../projects.constant';
 @Component({
     selector: 'cv-experience-list',
     imports: [
-        CommonModule,
-        MatBottomSheetModule,
-        MatIconModule,
-        MatListModule,
-        ExperienceCompanyComponent,
-    ],
+    MatBottomSheetModule,
+    MatIconModule,
+    MatListModule,
+    ExperienceCompanyComponent
+],
     templateUrl: './experience-list.component.html',
     styleUrl: './experience-list.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush

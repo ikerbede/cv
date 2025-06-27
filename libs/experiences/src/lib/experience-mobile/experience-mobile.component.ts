@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   MAT_BOTTOM_SHEET_DATA,
@@ -14,15 +14,14 @@ import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     imports: [
-        CommonModule,
-        RouterLink,
-        MatBottomSheetModule,
-        MatButtonModule,
-        MatIconModule,
-        MatToolbarModule,
-        ExperienceDetailsComponent,
-        ExperienceListComponent,
-    ],
+    RouterLink,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    ExperienceDetailsComponent,
+    ExperienceListComponent
+],
     selector: 'cv-experience-mobile',
     templateUrl: './experience-mobile.component.html',
     styleUrls: ['./experience-mobile.component.scss'],

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, EventEmitter, Output, input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,12 +8,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
     selector: 'cv-toolbar',
     imports: [
-        CommonModule,
-        MatButtonModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatTooltipModule,
-    ],
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatTooltipModule
+],
     templateUrl: './toolbar.component.html',
     styleUrls: ['./toolbar.component.scss']
 })

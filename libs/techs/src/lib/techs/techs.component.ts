@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -11,11 +11,10 @@ import { TECHS } from './techs.constant';
     styleUrls: ['./techs.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [
-        CommonModule,
-        MatIconModule,
-        MatProgressBarModule,
-        MatToolbarModule,
-    ]
+    MatIconModule,
+    MatProgressBarModule,
+    MatToolbarModule
+]
 })
 export class TechsComponent {
   techs = TECHS;

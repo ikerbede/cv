@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
@@ -7,11 +7,10 @@ import { ExperienceListComponent } from '../experience-list/experience-list.comp
 @Component({
     selector: 'cv-experiences-monitor',
     imports: [
-        CommonModule,
-        RouterOutlet,
-        MatDividerModule,
-        ExperienceListComponent,
-    ],
+    RouterOutlet,
+    MatDividerModule,
+    ExperienceListComponent
+],
     templateUrl: './experiences-monitor.component.html',
     styleUrl: './experiences-monitor.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
