@@ -4,12 +4,11 @@ import { Course } from '../course.model';
 import { COURSES } from '../courses.constant';
 
 @Component({
-  standalone: true,
-  selector: 'cv-education',
-  templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
+    selector: 'cv-education',
+    templateUrl: './education.component.html',
+    styleUrls: ['./education.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule]
 })
 export class EducationComponent {
   courses: readonly Course[] = COURSES;

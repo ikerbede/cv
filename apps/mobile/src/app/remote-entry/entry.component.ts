@@ -8,17 +8,16 @@ import { ToolbarComponent } from '@cv/toolbar';
 import { CV_ICONS, CV_LOGOS } from './cv-assets.constant';
 
 @Component({
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatSidenavModule,
-    NavigationComponent,
-    ToolbarComponent,
-  ],
-  selector: 'app-mobile-entry',
-  templateUrl: './entry.component.html',
-  styleUrl: './entry.component.scss',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatSidenavModule,
+        NavigationComponent,
+        ToolbarComponent,
+    ],
+    selector: 'app-mobile-entry',
+    templateUrl: './entry.component.html',
+    styleUrl: './entry.component.scss'
 })
 export class RemoteEntryComponent {
   constructor(private readonly _iconService: IconService) {

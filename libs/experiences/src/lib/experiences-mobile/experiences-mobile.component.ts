@@ -14,12 +14,11 @@ import { ExperienceListComponent } from '../experience-list/experience-list.comp
 import { ExperienceMobileComponent } from '../experience-mobile/experience-mobile.component';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, MatBottomSheetModule, ExperienceListComponent],
-  selector: 'cv-experiences-mobile',
-  templateUrl: './experiences-mobile.component.html',
-  styleUrls: ['./experiences-mobile.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, MatBottomSheetModule, ExperienceListComponent],
+    selector: 'cv-experiences-mobile',
+    templateUrl: './experiences-mobile.component.html',
+    styleUrls: ['./experiences-mobile.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperiencesMobileComponent {
   experienceId = input.required<string>();

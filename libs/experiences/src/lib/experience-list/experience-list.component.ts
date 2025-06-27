@@ -13,18 +13,17 @@ import { Project } from '../project.model';
 import { PROJECTS } from '../projects.constant';
 
 @Component({
-  selector: 'cv-experience-list',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatBottomSheetModule,
-    MatIconModule,
-    MatListModule,
-    ExperienceCompanyComponent,
-  ],
-  templateUrl: './experience-list.component.html',
-  styleUrl: './experience-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'cv-experience-list',
+    imports: [
+        CommonModule,
+        MatBottomSheetModule,
+        MatIconModule,
+        MatListModule,
+        ExperienceCompanyComponent,
+    ],
+    templateUrl: './experience-list.component.html',
+    styleUrl: './experience-list.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperienceListComponent {
   projects: readonly Project[] = PROJECTS;

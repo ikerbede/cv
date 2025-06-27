@@ -7,17 +7,16 @@ import { RouterModule } from '@angular/router';
 import { CvRoute } from '../cv-route.enum';
 
 @Component({
-  selector: 'cv-navigation',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatDividerModule,
-    MatIconModule,
-    MatListModule,
-  ],
-  templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss',
+    selector: 'cv-navigation',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatDividerModule,
+        MatIconModule,
+        MatListModule,
+    ],
+    templateUrl: './navigation.component.html',
+    styleUrl: './navigation.component.scss'
 })
 export class NavigationComponent {
   @Output() navigate = new EventEmitter<string>();

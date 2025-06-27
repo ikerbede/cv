@@ -6,17 +6,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { TECHS } from './techs.constant';
 
 @Component({
-  standalone: true,
-  selector: 'cv-techs',
-  templateUrl: './techs.component.html',
-  styleUrls: ['./techs.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatProgressBarModule,
-    MatToolbarModule,
-  ],
+    selector: 'cv-techs',
+    templateUrl: './techs.component.html',
+    styleUrls: ['./techs.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        CommonModule,
+        MatIconModule,
+        MatProgressBarModule,
+        MatToolbarModule,
+    ]
 })
 export class TechsComponent {
   techs = TECHS;

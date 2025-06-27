@@ -12,18 +12,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { PROJECTS } from '../projects.constant';
 
 @Component({
-  selector: 'cv-experience-details',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatChipsModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatIconModule,
-  ],
-  templateUrl: './experience-details.component.html',
-  styleUrls: ['./experience-details.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'cv-experience-details',
+    imports: [
+        CommonModule,
+        MatChipsModule,
+        MatDialogModule,
+        MatDividerModule,
+        MatIconModule,
+    ],
+    templateUrl: './experience-details.component.html',
+    styleUrls: ['./experience-details.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperienceDetailsComponent {
   experienceId = input.required<string | number>();

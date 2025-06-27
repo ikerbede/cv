@@ -9,10 +9,9 @@ import { Router, RouterModule } from '@angular/router';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 
 @Component({
-  standalone: true,
-  imports: [RouterModule],
-  selector: 'app-root',
-  template: '<router-outlet></router-outlet>',
+    imports: [RouterModule],
+    selector: 'app-root',
+    template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
   constructor(

@@ -13,21 +13,20 @@ import { ExperienceListComponent } from '../experience-list/experience-list.comp
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatIconModule,
-    MatToolbarModule,
-    ExperienceDetailsComponent,
-    ExperienceListComponent,
-  ],
-  selector: 'cv-experience-mobile',
-  templateUrl: './experience-mobile.component.html',
-  styleUrls: ['./experience-mobile.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        CommonModule,
+        RouterLink,
+        MatBottomSheetModule,
+        MatButtonModule,
+        MatIconModule,
+        MatToolbarModule,
+        ExperienceDetailsComponent,
+        ExperienceListComponent,
+    ],
+    selector: 'cv-experience-mobile',
+    templateUrl: './experience-mobile.component.html',
+    styleUrls: ['./experience-mobile.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperienceMobileComponent {
   private readonly _bottomSheetRef =

@@ -1,4 +1,4 @@
-import { ModuleFederationConfig } from '@nx/webpack';
+import { ModuleFederationConfig } from '@nx/module-federation';
 
 const config: ModuleFederationConfig = {
   name: 'host',
@@ -14,7 +14,10 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: [['mobile', 'http://localhost:4201'], ['monitor', 'http://localhost:4202']],
+  remotes: [
+    ['mobile', 'http://localhost:4201'],
+    ['monitor', 'http://localhost:4202'],
+  ],
 };
 
 export default config;

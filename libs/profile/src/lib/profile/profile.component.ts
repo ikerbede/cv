@@ -5,18 +5,17 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  standalone: true,
-  imports: [
-    CommonModule,
-    NgOptimizedImage,
-    MatButtonModule,
-    MatChipsModule,
-    MatIconModule,
-  ],
-  selector: 'cv-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        CommonModule,
+        NgOptimizedImage,
+        MatButtonModule,
+        MatChipsModule,
+        MatIconModule,
+    ],
+    selector: 'cv-profile',
+    templateUrl: './profile.component.html',
+    styleUrls: ['./profile.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProfileComponent {
   @HostBinding('class.profile') class = true;

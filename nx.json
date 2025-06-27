@@ -99,5 +99,6 @@
       "standalone": true
     }
   },
-  "defaultProject": "host"
+  "defaultProject": "host",
+  "useLegacyCache": true
 }
