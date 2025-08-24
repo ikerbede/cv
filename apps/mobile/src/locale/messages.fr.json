@@ -1,0 +1,10 @@
+{
+  "locale": "fr",
+  "translations": {
+    "3262236020277300799": "Téléphone",
+    "5522413092668860006": "DEVELOPPEUR ANGULAR",
+    "361458769961488813": " Après un master recherche en Physique, j'ai finalement changé d'orientation pour le développement web en 2012 et me suis rapidement passionné par Angular, féru de clean code et de bonnes pratiques ! ",
+    "6490610124396276078": " Au quotidien, je recherche continuellement la meilleure qualité de code, en visant toujours le mélange optimal entre implémentation la plus simple et architecture la plus maintenable et performante. Je suis toujours partant pour réaliser un refactoring d'ampleur afin de réduire la dette technique ou améliorer l'expérience développeur. ",
+    "8385562192253926540": " On entend souvent qu'un bon ingénieur n'est pas technocentré mais adapte la technologie en fonction de la solution qu'il souhaite mettre en place. Malheureusement je ne dois donc pas être un bon ingénieur car j'ai préferré me spécialiser complément en Angular ! :D "
+  }
+}

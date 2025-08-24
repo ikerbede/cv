@@ -6,6 +6,15 @@
   "sourceRoot": "apps/monitor/src",
   "tags": ["type:app"],
   "implicitDependencies": ["shared-assets"],
+  "i18n": {
+    "sourceLocale": "en-US",
+    "locales": {
+      "en": "apps/monitor/src/locale/messages.en.json",
+      "es": "apps/monitor/src/locale/messages.es.json",
+      "fr": "apps/monitor/src/locale/messages.fr.json",
+      "eu": "apps/monitor/src/locale/messages.eu.json"
+    }
+  },
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
@@ -14,7 +23,9 @@
         "outputPath": "dist/apps/monitor",
         "index": "apps/monitor/src/index.html",
         "main": "apps/monitor/src/main.ts",
-        "polyfills": [],
+        "polyfills": ["@angular/localize/init"],
+        "localize": true,
+        "i18nMissingTranslation": "warning",
         "tsConfig": "apps/monitor/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -64,9 +75,21 @@
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true
+        },
+        "en": {
+          "localize": ["en"]
+        },
+        "es": {
+          "localize": ["es"]
+        },
+        "fr": {
+          "localize": ["fr"]
+        },
+        "eu": {
+          "localize": ["eu"]
         }
       },
-      "defaultConfiguration": "production"
+      "defaultConfiguration": "production,en"
     },
     "serve": {
       "executor": "@nx/angular:dev-server",
@@ -88,7 +111,9 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "monitor:build"
+        "buildTarget": "monitor:build",
+        "outputPath": "apps/monitor/src/locale",
+        "format": "json"
       }
     },
     "lint": {
